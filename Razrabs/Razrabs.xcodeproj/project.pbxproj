@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		1C68A4BB28B43501008AE2A1 /* PRazrabsApi.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1C68A4BA28B43501008AE2A1 /* PRazrabsApi.swift */; };
 		E907806528B09D6A0045F339 /* RazrabsApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = E907806428B09D6A0045F339 /* RazrabsApp.swift */; };
 		E907806728B09D6A0045F339 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E907806628B09D6A0045F339 /* ContentView.swift */; };
 		E907806928B09D6D0045F339 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = E907806828B09D6D0045F339 /* Assets.xcassets */; };
@@ -44,6 +45,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		1C68A4BA28B43501008AE2A1 /* PRazrabsApi.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PRazrabsApi.swift; sourceTree = "<group>"; };
 		E907806128B09D6A0045F339 /* Razrabs.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Razrabs.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		E907806428B09D6A0045F339 /* RazrabsApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RazrabsApp.swift; sourceTree = "<group>"; };
 		E907806628B09D6A0045F339 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -91,6 +93,15 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		1C68A4B928B434F7008AE2A1 /* RazrabsApi */ = {
+			isa = PBXGroup;
+			children = (
+				E907808F28B09FC00045F339 /* RazrabsApi.swift */,
+				1C68A4BA28B43501008AE2A1 /* PRazrabsApi.swift */,
+			);
+			path = RazrabsApi;
+			sourceTree = "<group>";
+		};
 		E907805828B09D6A0045F339 = {
 			isa = PBXGroup;
 			children = (
@@ -155,7 +166,7 @@
 		E907808E28B09FB50045F339 /* Services */ = {
 			isa = PBXGroup;
 			children = (
-				E907808F28B09FC00045F339 /* RazrabsApi.swift */,
+				1C68A4B928B434F7008AE2A1 /* RazrabsApi */,
 			);
 			path = Services;
 			sourceTree = "<group>";
@@ -327,6 +338,7 @@
 				E907809028B09FC00045F339 /* RazrabsApi.swift in Sources */,
 				E90780A828B136A40045F339 /* FeedResponse.swift in Sources */,
 				E907806728B09D6A0045F339 /* ContentView.swift in Sources */,
+				1C68A4BB28B43501008AE2A1 /* PRazrabsApi.swift in Sources */,
 				E907806528B09D6A0045F339 /* RazrabsApp.swift in Sources */,
 				E907809A28B0F0470045F339 /* FeedItem.swift in Sources */,
 				E907809328B0AC380045F339 /* TagItem.swift in Sources */,
@@ -503,6 +515,7 @@
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				IPHONEOS_DEPLOYMENT_TARGET = 15.1;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -532,6 +545,7 @@
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				IPHONEOS_DEPLOYMENT_TARGET = 15.1;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
