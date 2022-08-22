@@ -1,13 +1,6 @@
-//
-//  Razrabs_ruUITests.swift
-//  Razrabs.ruUITests
-//
-//  Created by Yevgeniy Zakharov on 8/20/22.
-//
-
 import XCTest
 
-class Razrabs_ruUITests: XCTestCase {
+class RazrabsUITests: XCTestCase {
 
     override func setUpWithError() throws {
         // Put setup code here. This method is called before the invocation of each test method in the class.

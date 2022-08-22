@@ -11,8 +11,8 @@
 		E907806728B09D6A0045F339 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E907806628B09D6A0045F339 /* ContentView.swift */; };
 		E907806928B09D6D0045F339 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = E907806828B09D6D0045F339 /* Assets.xcassets */; };
 		E907806C28B09D6D0045F339 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = E907806B28B09D6D0045F339 /* Preview Assets.xcassets */; };
-		E907808028B09D6D0045F339 /* Razrabs_ruUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = E907807F28B09D6D0045F339 /* Razrabs_ruUITests.swift */; };
-		E907808228B09D6D0045F339 /* Razrabs_ruUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = E907808128B09D6D0045F339 /* Razrabs_ruUITestsLaunchTests.swift */; };
+		E907808028B09D6D0045F339 /* RazrabsUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = E907807F28B09D6D0045F339 /* RazrabsUITests.swift */; };
+		E907808228B09D6D0045F339 /* RazrabsUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = E907808128B09D6D0045F339 /* RazrabsUITestsLaunchTests.swift */; };
 		E907809028B09FC00045F339 /* RazrabsApi.swift in Sources */ = {isa = PBXBuildFile; fileRef = E907808F28B09FC00045F339 /* RazrabsApi.swift */; };
 		E907809328B0AC380045F339 /* TagItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = E907809228B0AC380045F339 /* TagItem.swift */; };
 		E907809528B0ACA60045F339 /* TagItemTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = E907809428B0ACA60045F339 /* TagItemTests.swift */; };
@@ -51,8 +51,8 @@
 		E907806B28B09D6D0045F339 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		E907807128B09D6D0045F339 /* RazrabsTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = RazrabsTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		E907807B28B09D6D0045F339 /* RazrabsUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = RazrabsUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
-		E907807F28B09D6D0045F339 /* Razrabs_ruUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Razrabs_ruUITests.swift; sourceTree = "<group>"; };
-		E907808128B09D6D0045F339 /* Razrabs_ruUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Razrabs_ruUITestsLaunchTests.swift; sourceTree = "<group>"; };
+		E907807F28B09D6D0045F339 /* RazrabsUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RazrabsUITests.swift; sourceTree = "<group>"; };
+		E907808128B09D6D0045F339 /* RazrabsUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RazrabsUITestsLaunchTests.swift; sourceTree = "<group>"; };
 		E907808F28B09FC00045F339 /* RazrabsApi.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RazrabsApi.swift; sourceTree = "<group>"; };
 		E907809228B0AC380045F339 /* TagItem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TagItem.swift; sourceTree = "<group>"; };
 		E907809428B0ACA60045F339 /* TagItemTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TagItemTests.swift; sourceTree = "<group>"; };
@@ -96,7 +96,7 @@
 			children = (
 				E907806328B09D6A0045F339 /* Razrabs */,
 				E907807428B09D6D0045F339 /* RazrabsTests */,
-				E907807E28B09D6D0045F339 /* Razrabs.ruUITests */,
+				E907807E28B09D6D0045F339 /* RazrabsUITests */,
 				E907806228B09D6A0045F339 /* Products */,
 			);
 			sourceTree = "<group>";
@@ -143,13 +143,13 @@
 			path = RazrabsTests;
 			sourceTree = "<group>";
 		};
-		E907807E28B09D6D0045F339 /* Razrabs.ruUITests */ = {
+		E907807E28B09D6D0045F339 /* RazrabsUITests */ = {
 			isa = PBXGroup;
 			children = (
-				E907807F28B09D6D0045F339 /* Razrabs_ruUITests.swift */,
-				E907808128B09D6D0045F339 /* Razrabs_ruUITestsLaunchTests.swift */,
+				E907807F28B09D6D0045F339 /* RazrabsUITests.swift */,
+				E907808128B09D6D0045F339 /* RazrabsUITestsLaunchTests.swift */,
 			);
-			path = Razrabs.ruUITests;
+			path = RazrabsUITests;
 			sourceTree = "<group>";
 		};
 		E907808E28B09FB50045F339 /* Services */ = {
@@ -350,8 +350,8 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				E907808028B09D6D0045F339 /* Razrabs_ruUITests.swift in Sources */,
-				E907808228B09D6D0045F339 /* Razrabs_ruUITestsLaunchTests.swift in Sources */,
+				E907808028B09D6D0045F339 /* RazrabsUITests.swift in Sources */,
+				E907808228B09D6D0045F339 /* RazrabsUITestsLaunchTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -599,7 +599,7 @@
 				SWIFT_EMIT_LOC_STRINGS = NO;
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
-				TEST_TARGET_NAME = Razrabs.ru;
+				TEST_TARGET_NAME = Razrabs;
 			};
 			name = Debug;
 		};
@@ -617,7 +617,7 @@
 				SWIFT_EMIT_LOC_STRINGS = NO;
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
-				TEST_TARGET_NAME = Razrabs.ru;
+				TEST_TARGET_NAME = Razrabs;
 			};
 			name = Release;
 		};

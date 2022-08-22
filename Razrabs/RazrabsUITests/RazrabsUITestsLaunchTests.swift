@@ -1,13 +1,6 @@
-//
-//  Razrabs_ruUITestsLaunchTests.swift
-//  Razrabs.ruUITests
-//
-//  Created by Yevgeniy Zakharov on 8/20/22.
-//
-
 import XCTest
 
-class Razrabs_ruUITestsLaunchTests: XCTestCase {
+class RazrabsUITestsLaunchTests: XCTestCase {
 
     override class var runsForEachTargetApplicationUIConfiguration: Bool {
         true
