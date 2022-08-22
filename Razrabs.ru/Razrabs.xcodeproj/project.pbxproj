@@ -7,11 +7,10 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		E907806528B09D6A0045F339 /* Razrabs_ruApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = E907806428B09D6A0045F339 /* Razrabs_ruApp.swift */; };
+		E907806528B09D6A0045F339 /* RazrabsApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = E907806428B09D6A0045F339 /* RazrabsApp.swift */; };
 		E907806728B09D6A0045F339 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E907806628B09D6A0045F339 /* ContentView.swift */; };
 		E907806928B09D6D0045F339 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = E907806828B09D6D0045F339 /* Assets.xcassets */; };
 		E907806C28B09D6D0045F339 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = E907806B28B09D6D0045F339 /* Preview Assets.xcassets */; };
-		E907807628B09D6D0045F339 /* Razrabs_ruTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = E907807528B09D6D0045F339 /* Razrabs_ruTests.swift */; };
 		E907808028B09D6D0045F339 /* Razrabs_ruUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = E907807F28B09D6D0045F339 /* Razrabs_ruUITests.swift */; };
 		E907808228B09D6D0045F339 /* Razrabs_ruUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = E907808128B09D6D0045F339 /* Razrabs_ruUITestsLaunchTests.swift */; };
 		E907809028B09FC00045F339 /* RazrabsApi.swift in Sources */ = {isa = PBXBuildFile; fileRef = E907808F28B09FC00045F339 /* RazrabsApi.swift */; };
@@ -45,14 +44,13 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
-		E907806128B09D6A0045F339 /* Razrabs.ru.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Razrabs.ru.app; sourceTree = BUILT_PRODUCTS_DIR; };
-		E907806428B09D6A0045F339 /* Razrabs_ruApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Razrabs_ruApp.swift; sourceTree = "<group>"; };
+		E907806128B09D6A0045F339 /* Razrabs.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Razrabs.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		E907806428B09D6A0045F339 /* RazrabsApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RazrabsApp.swift; sourceTree = "<group>"; };
 		E907806628B09D6A0045F339 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
 		E907806828B09D6D0045F339 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		E907806B28B09D6D0045F339 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
-		E907807128B09D6D0045F339 /* Razrabs.ruTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = Razrabs.ruTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
-		E907807528B09D6D0045F339 /* Razrabs_ruTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Razrabs_ruTests.swift; sourceTree = "<group>"; };
-		E907807B28B09D6D0045F339 /* Razrabs.ruUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = Razrabs.ruUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		E907807128B09D6D0045F339 /* RazrabsTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = RazrabsTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		E907807B28B09D6D0045F339 /* RazrabsUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = RazrabsUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		E907807F28B09D6D0045F339 /* Razrabs_ruUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Razrabs_ruUITests.swift; sourceTree = "<group>"; };
 		E907808128B09D6D0045F339 /* Razrabs_ruUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Razrabs_ruUITestsLaunchTests.swift; sourceTree = "<group>"; };
 		E907808F28B09FC00045F339 /* RazrabsApi.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RazrabsApi.swift; sourceTree = "<group>"; };
@@ -96,8 +94,8 @@
 		E907805828B09D6A0045F339 = {
 			isa = PBXGroup;
 			children = (
-				E907806328B09D6A0045F339 /* Razrabs.ru */,
-				E907807428B09D6D0045F339 /* Razrabs.ruTests */,
+				E907806328B09D6A0045F339 /* Razrabs */,
+				E907807428B09D6D0045F339 /* RazrabsTests */,
 				E907807E28B09D6D0045F339 /* Razrabs.ruUITests */,
 				E907806228B09D6A0045F339 /* Products */,
 			);
@@ -106,17 +104,17 @@
 		E907806228B09D6A0045F339 /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				E907806128B09D6A0045F339 /* Razrabs.ru.app */,
-				E907807128B09D6D0045F339 /* Razrabs.ruTests.xctest */,
-				E907807B28B09D6D0045F339 /* Razrabs.ruUITests.xctest */,
+				E907806128B09D6A0045F339 /* Razrabs.app */,
+				E907807128B09D6D0045F339 /* RazrabsTests.xctest */,
+				E907807B28B09D6D0045F339 /* RazrabsUITests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
 		};
-		E907806328B09D6A0045F339 /* Razrabs.ru */ = {
+		E907806328B09D6A0045F339 /* Razrabs */ = {
 			isa = PBXGroup;
 			children = (
-				E907806428B09D6A0045F339 /* Razrabs_ruApp.swift */,
+				E907806428B09D6A0045F339 /* RazrabsApp.swift */,
 				E907806628B09D6A0045F339 /* ContentView.swift */,
 				E907809D28B0F1FB0045F339 /* Extensions */,
 				E907809128B0AC1A0045F339 /* DataModel */,
@@ -124,7 +122,7 @@
 				E907806828B09D6D0045F339 /* Assets.xcassets */,
 				E907806A28B09D6D0045F339 /* Preview Content */,
 			);
-			path = Razrabs.ru;
+			path = Razrabs;
 			sourceTree = "<group>";
 		};
 		E907806A28B09D6D0045F339 /* Preview Content */ = {
@@ -135,15 +133,14 @@
 			path = "Preview Content";
 			sourceTree = "<group>";
 		};
-		E907807428B09D6D0045F339 /* Razrabs.ruTests */ = {
+		E907807428B09D6D0045F339 /* RazrabsTests */ = {
 			isa = PBXGroup;
 			children = (
 				E90780A028B12AB50045F339 /* Extensions */,
-				E907807528B09D6D0045F339 /* Razrabs_ruTests.swift */,
 				E907809428B0ACA60045F339 /* TagItemTests.swift */,
 				E907809B28B0F1340045F339 /* FeedItemTests.swift */,
 			);
-			path = Razrabs.ruTests;
+			path = RazrabsTests;
 			sourceTree = "<group>";
 		};
 		E907807E28B09D6D0045F339 /* Razrabs.ruUITests */ = {
@@ -194,9 +191,9 @@
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
-		E907806028B09D6A0045F339 /* Razrabs.ru */ = {
+		E907806028B09D6A0045F339 /* Razrabs */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = E907808528B09D6D0045F339 /* Build configuration list for PBXNativeTarget "Razrabs.ru" */;
+			buildConfigurationList = E907808528B09D6D0045F339 /* Build configuration list for PBXNativeTarget "Razrabs" */;
 			buildPhases = (
 				E907805D28B09D6A0045F339 /* Sources */,
 				E907805E28B09D6A0045F339 /* Frameworks */,
@@ -206,17 +203,17 @@
 			);
 			dependencies = (
 			);
-			name = Razrabs.ru;
+			name = Razrabs;
 			packageProductDependencies = (
 				E907809728B0AE150045F339 /* Then */,
 			);
 			productName = Razrabs.ru;
-			productReference = E907806128B09D6A0045F339 /* Razrabs.ru.app */;
+			productReference = E907806128B09D6A0045F339 /* Razrabs.app */;
 			productType = "com.apple.product-type.application";
 		};
-		E907807028B09D6D0045F339 /* Razrabs.ruTests */ = {
+		E907807028B09D6D0045F339 /* RazrabsTests */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = E907808828B09D6D0045F339 /* Build configuration list for PBXNativeTarget "Razrabs.ruTests" */;
+			buildConfigurationList = E907808828B09D6D0045F339 /* Build configuration list for PBXNativeTarget "RazrabsTests" */;
 			buildPhases = (
 				E907806D28B09D6D0045F339 /* Sources */,
 				E907806E28B09D6D0045F339 /* Frameworks */,
@@ -227,14 +224,14 @@
 			dependencies = (
 				E907807328B09D6D0045F339 /* PBXTargetDependency */,
 			);
-			name = Razrabs.ruTests;
+			name = RazrabsTests;
 			productName = Razrabs.ruTests;
-			productReference = E907807128B09D6D0045F339 /* Razrabs.ruTests.xctest */;
+			productReference = E907807128B09D6D0045F339 /* RazrabsTests.xctest */;
 			productType = "com.apple.product-type.bundle.unit-test";
 		};
-		E907807A28B09D6D0045F339 /* Razrabs.ruUITests */ = {
+		E907807A28B09D6D0045F339 /* RazrabsUITests */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = E907808B28B09D6D0045F339 /* Build configuration list for PBXNativeTarget "Razrabs.ruUITests" */;
+			buildConfigurationList = E907808B28B09D6D0045F339 /* Build configuration list for PBXNativeTarget "RazrabsUITests" */;
 			buildPhases = (
 				E907807728B09D6D0045F339 /* Sources */,
 				E907807828B09D6D0045F339 /* Frameworks */,
@@ -245,9 +242,9 @@
 			dependencies = (
 				E907807D28B09D6D0045F339 /* PBXTargetDependency */,
 			);
-			name = Razrabs.ruUITests;
+			name = RazrabsUITests;
 			productName = Razrabs.ruUITests;
-			productReference = E907807B28B09D6D0045F339 /* Razrabs.ruUITests.xctest */;
+			productReference = E907807B28B09D6D0045F339 /* RazrabsUITests.xctest */;
 			productType = "com.apple.product-type.bundle.ui-testing";
 		};
 /* End PBXNativeTarget section */
@@ -273,7 +270,7 @@
 					};
 				};
 			};
-			buildConfigurationList = E907805C28B09D6A0045F339 /* Build configuration list for PBXProject "Razrabs.ru" */;
+			buildConfigurationList = E907805C28B09D6A0045F339 /* Build configuration list for PBXProject "Razrabs" */;
 			compatibilityVersion = "Xcode 13.0";
 			developmentRegion = en;
 			hasScannedForEncodings = 0;
@@ -289,9 +286,9 @@
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				E907806028B09D6A0045F339 /* Razrabs.ru */,
-				E907807028B09D6D0045F339 /* Razrabs.ruTests */,
-				E907807A28B09D6D0045F339 /* Razrabs.ruUITests */,
+				E907806028B09D6A0045F339 /* Razrabs */,
+				E907807028B09D6D0045F339 /* RazrabsTests */,
+				E907807A28B09D6D0045F339 /* RazrabsUITests */,
 			);
 		};
 /* End PBXProject section */
@@ -330,7 +327,7 @@
 				E907809028B09FC00045F339 /* RazrabsApi.swift in Sources */,
 				E90780A828B136A40045F339 /* FeedResponse.swift in Sources */,
 				E907806728B09D6A0045F339 /* ContentView.swift in Sources */,
-				E907806528B09D6A0045F339 /* Razrabs_ruApp.swift in Sources */,
+				E907806528B09D6A0045F339 /* RazrabsApp.swift in Sources */,
 				E907809A28B0F0470045F339 /* FeedItem.swift in Sources */,
 				E907809328B0AC380045F339 /* TagItem.swift in Sources */,
 				E907809F28B0F21B0045F339 /* JSONDecoder+dataModelDecoder.swift in Sources */,
@@ -343,7 +340,6 @@
 			files = (
 				E90780A428B133BA0045F339 /* TagItem+Equatable.swift in Sources */,
 				E90780A628B1341E0045F339 /* FeedItem+Equatable.swift in Sources */,
-				E907807628B09D6D0045F339 /* Razrabs_ruTests.swift in Sources */,
 				E90780A228B12AC40045F339 /* Date+iso.swift in Sources */,
 				E907809C28B0F1340045F339 /* FeedItemTests.swift in Sources */,
 				E907809528B0ACA60045F339 /* TagItemTests.swift in Sources */,
@@ -364,12 +360,12 @@
 /* Begin PBXTargetDependency section */
 		E907807328B09D6D0045F339 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
-			target = E907806028B09D6A0045F339 /* Razrabs.ru */;
+			target = E907806028B09D6A0045F339 /* Razrabs */;
 			targetProxy = E907807228B09D6D0045F339 /* PBXContainerItemProxy */;
 		};
 		E907807D28B09D6D0045F339 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
-			target = E907806028B09D6A0045F339 /* Razrabs.ru */;
+			target = E907806028B09D6A0045F339 /* Razrabs */;
 			targetProxy = E907807C28B09D6D0045F339 /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
@@ -498,7 +494,7 @@
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
-				DEVELOPMENT_ASSET_PATHS = "\"Razrabs.ru/Preview Content\"";
+				DEVELOPMENT_ASSET_PATHS = "\"Razrabs/Preview Content\"";
 				DEVELOPMENT_TEAM = QDTPG5DB79;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
@@ -527,7 +523,7 @@
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
-				DEVELOPMENT_ASSET_PATHS = "\"Razrabs.ru/Preview Content\"";
+				DEVELOPMENT_ASSET_PATHS = "\"Razrabs/Preview Content\"";
 				DEVELOPMENT_TEAM = QDTPG5DB79;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
@@ -565,7 +561,7 @@
 				SWIFT_EMIT_LOC_STRINGS = NO;
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
-				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Razrabs.ru.app/Razrabs.ru";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Razrabs.app/Razrabs";
 			};
 			name = Debug;
 		};
@@ -585,7 +581,7 @@
 				SWIFT_EMIT_LOC_STRINGS = NO;
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
-				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Razrabs.ru.app/Razrabs.ru";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Razrabs.app/Razrabs";
 			};
 			name = Release;
 		};
@@ -628,7 +624,7 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		E907805C28B09D6A0045F339 /* Build configuration list for PBXProject "Razrabs.ru" */ = {
+		E907805C28B09D6A0045F339 /* Build configuration list for PBXProject "Razrabs" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				E907808328B09D6D0045F339 /* Debug */,
@@ -637,7 +633,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		E907808528B09D6D0045F339 /* Build configuration list for PBXNativeTarget "Razrabs.ru" */ = {
+		E907808528B09D6D0045F339 /* Build configuration list for PBXNativeTarget "Razrabs" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				E907808628B09D6D0045F339 /* Debug */,
@@ -646,7 +642,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		E907808828B09D6D0045F339 /* Build configuration list for PBXNativeTarget "Razrabs.ruTests" */ = {
+		E907808828B09D6D0045F339 /* Build configuration list for PBXNativeTarget "RazrabsTests" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				E907808928B09D6D0045F339 /* Debug */,
@@ -655,7 +651,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		E907808B28B09D6D0045F339 /* Build configuration list for PBXNativeTarget "Razrabs.ruUITests" */ = {
+		E907808B28B09D6D0045F339 /* Build configuration list for PBXNativeTarget "RazrabsUITests" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				E907808C28B09D6D0045F339 /* Debug */,

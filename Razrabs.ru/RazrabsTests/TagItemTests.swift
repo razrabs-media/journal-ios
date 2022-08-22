@@ -1,6 +1,6 @@
 import XCTest
 import Then
-@testable import Razrabs_ru
+@testable import Razrabs
 
 class TagItemTests: XCTestCase {
     

@@ -1,5 +1,5 @@
 import XCTest
-@testable import Razrabs_ru
+@testable import Razrabs
 
 class FeedItemTests: XCTestCase {
     

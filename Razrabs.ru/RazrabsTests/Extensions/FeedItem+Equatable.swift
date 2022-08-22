@@ -1,5 +1,5 @@
 import Foundation
-@testable import Razrabs_ru
+@testable import Razrabs
 
 extension FeedItem: Equatable {
     public static func ==(lhs: Self, rhs: Self) -> Bool {

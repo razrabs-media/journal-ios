@@ -1,7 +1,7 @@
 import SwiftUI
 
 @main
-struct Razrabs_ruApp: App {
+struct RazrabsApp: App {
     let razrabsApi = RazrabsApi(scheme: "https", host: "api.razrabs.ru")
     
     var body: some Scene {
