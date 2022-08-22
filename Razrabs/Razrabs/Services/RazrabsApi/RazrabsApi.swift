@@ -1,8 +1,8 @@
 import Foundation
 
-class RazrabsApi {
-    let scheme: String
-    let host: String
+final class RazrabsApi: PRazrabsApi {
+    private let scheme: String
+    private let host: String
     
     enum Error: Swift.Error {
         case responseIsNil

@@ -1,7 +1,7 @@
 import SwiftUI
 
 struct ContentView: View {
-    let razrabsApi: RazrabsApi
+    let razrabsApi: PRazrabsApi
     
     @State var feedItems = [FeedItem]()
     
@@ -43,6 +43,6 @@ struct ContentView: View {
 
 struct ContentView_Previews: PreviewProvider {
     static var previews: some View {
-        ContentView(razrabsApi: .init(scheme: "https", host: "api.razrabs.ru"))
+        ContentView(razrabsApi: RazrabsApi(scheme: "https", host: "api.razrabs.ru"))
     }
 }
