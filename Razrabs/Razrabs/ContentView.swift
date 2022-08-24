@@ -26,10 +26,13 @@ struct ContentView: View {
                     .navigationTitle("Разрабы")
                     .onAppear {
                         razrabsApi.requestFeed(callback: { result in
-                            print("result = \(result)")
+                            print("feed result = \(result)")
                             switch result {
                             case .success(let feedResponse):
                                 feedItems = feedResponse.data.feeds// + feedResponse.data.feeds
+                                razrabsApi.requestCurrentFrontPage { result in
+                                    print("current front page result = \(result)")
+                                }
                             case .failure(let error):
                                 print("error = \(error)")
                             }
