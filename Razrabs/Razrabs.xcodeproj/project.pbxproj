@@ -8,7 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		E907806528B09D6A0045F339 /* RazrabsApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = E907806428B09D6A0045F339 /* RazrabsApp.swift */; };
-		E907806728B09D6A0045F339 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E907806628B09D6A0045F339 /* ContentView.swift */; };
+		E907806728B09D6A0045F339 /* MainView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E907806628B09D6A0045F339 /* MainView.swift */; };
 		E907806928B09D6D0045F339 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = E907806828B09D6D0045F339 /* Assets.xcassets */; };
 		E907806C28B09D6D0045F339 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = E907806B28B09D6D0045F339 /* Preview Assets.xcassets */; };
 		E907808028B09D6D0045F339 /* RazrabsUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = E907807F28B09D6D0045F339 /* RazrabsUITests.swift */; };
@@ -43,6 +43,9 @@
 		E9BD099B28B5F6630063CA24 /* PostOnFrontPage+Equatable.swift in Sources */ = {isa = PBXBuildFile; fileRef = E9BD099A28B5F6630063CA24 /* PostOnFrontPage+Equatable.swift */; };
 		E9BD099D28B5F6AA0063CA24 /* PostOnFrontPageTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = E9BD099C28B5F6AA0063CA24 /* PostOnFrontPageTests.swift */; };
 		E9BD099F28B601070063CA24 /* FrontPage.swift in Sources */ = {isa = PBXBuildFile; fileRef = E9BD099E28B601070063CA24 /* FrontPage.swift */; };
+		E9ECFFA328B71FBE003682D1 /* Color+hex.swift in Sources */ = {isa = PBXBuildFile; fileRef = E9ECFFA228B71FBE003682D1 /* Color+hex.swift */; };
+		E9ECFFA628B72A0B003682D1 /* MainViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = E9ECFFA528B72A0B003682D1 /* MainViewModel.swift */; };
+		E9ECFFA828B72A2E003682D1 /* PostViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = E9ECFFA728B72A2E003682D1 /* PostViewModel.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -65,7 +68,7 @@
 /* Begin PBXFileReference section */
 		E907806128B09D6A0045F339 /* Razrabs.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Razrabs.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		E907806428B09D6A0045F339 /* RazrabsApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RazrabsApp.swift; sourceTree = "<group>"; };
-		E907806628B09D6A0045F339 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
+		E907806628B09D6A0045F339 /* MainView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainView.swift; sourceTree = "<group>"; };
 		E907806828B09D6D0045F339 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		E907806B28B09D6D0045F339 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		E907807128B09D6D0045F339 /* RazrabsTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = RazrabsTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -101,6 +104,9 @@
 		E9BD099A28B5F6630063CA24 /* PostOnFrontPage+Equatable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "PostOnFrontPage+Equatable.swift"; sourceTree = "<group>"; };
 		E9BD099C28B5F6AA0063CA24 /* PostOnFrontPageTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PostOnFrontPageTests.swift; sourceTree = "<group>"; };
 		E9BD099E28B601070063CA24 /* FrontPage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FrontPage.swift; sourceTree = "<group>"; };
+		E9ECFFA228B71FBE003682D1 /* Color+hex.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Color+hex.swift"; sourceTree = "<group>"; };
+		E9ECFFA528B72A0B003682D1 /* MainViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainViewModel.swift; sourceTree = "<group>"; };
+		E9ECFFA728B72A2E003682D1 /* PostViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PostViewModel.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -153,7 +159,7 @@
 			isa = PBXGroup;
 			children = (
 				E907806428B09D6A0045F339 /* RazrabsApp.swift */,
-				E907806628B09D6A0045F339 /* ContentView.swift */,
+				E907806628B09D6A0045F339 /* MainView.swift */,
 				E907809D28B0F1FB0045F339 /* Extensions */,
 				E907809128B0AC1A0045F339 /* DataModel */,
 				E907808E28B09FB50045F339 /* Services */,
@@ -207,6 +213,7 @@
 		E907809128B0AC1A0045F339 /* DataModel */ = {
 			isa = PBXGroup;
 			children = (
+				E9ECFFA428B7291E003682D1 /* ViewModel */,
 				E93EB7F428B6192F00338215 /* Responses */,
 				E907809228B0AC380045F339 /* TagItem.swift */,
 				E907809928B0F0470045F339 /* FeedItem.swift */,
@@ -224,6 +231,7 @@
 			isa = PBXGroup;
 			children = (
 				E907809E28B0F21B0045F339 /* JSONDecoder+dataModelDecoder.swift */,
+				E9ECFFA228B71FBE003682D1 /* Color+hex.swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -251,6 +259,15 @@
 				E93EB7F528B6194500338215 /* CurrentFrontPageResponse.swift */,
 			);
 			path = Responses;
+			sourceTree = "<group>";
+		};
+		E9ECFFA428B7291E003682D1 /* ViewModel */ = {
+			isa = PBXGroup;
+			children = (
+				E9ECFFA528B72A0B003682D1 /* MainViewModel.swift */,
+				E9ECFFA728B72A2E003682D1 /* PostViewModel.swift */,
+			);
+			path = ViewModel;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -394,7 +411,9 @@
 				E907809028B09FC00045F339 /* RazrabsApi.swift in Sources */,
 				E9BD099F28B601070063CA24 /* FrontPage.swift in Sources */,
 				E90780A828B136A40045F339 /* FeedResponse.swift in Sources */,
-				E907806728B09D6A0045F339 /* ContentView.swift in Sources */,
+				E907806728B09D6A0045F339 /* MainView.swift in Sources */,
+				E9ECFFA828B72A2E003682D1 /* PostViewModel.swift in Sources */,
+				E9ECFFA328B71FBE003682D1 /* Color+hex.swift in Sources */,
 				E907806528B09D6A0045F339 /* RazrabsApp.swift in Sources */,
 				E9BD099328B5F1500063CA24 /* ComponentItem.swift in Sources */,
 				E907809A28B0F0470045F339 /* FeedItem.swift in Sources */,
@@ -403,6 +422,7 @@
 				E93EB7F628B6194500338215 /* CurrentFrontPageResponse.swift in Sources */,
 				E9BD098128B5E4450063CA24 /* Position.swift in Sources */,
 				E907809F28B0F21B0045F339 /* JSONDecoder+dataModelDecoder.swift in Sources */,
+				E9ECFFA628B72A0B003682D1 /* MainViewModel.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
