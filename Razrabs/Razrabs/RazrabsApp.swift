@@ -6,7 +6,7 @@ struct RazrabsApp: App {
     
     var body: some Scene {
         WindowGroup {
-            ContentView(razrabsApi: razrabsApi)
+            FeedView(viewModel: FeedViewModelImpl(razrabsApi: razrabsApi))
         }
     }
 }

@@ -7,8 +7,11 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		D3BDFAFC28BA35DF0062FADD /* Color+Feed.swift in Sources */ = {isa = PBXBuildFile; fileRef = D3BDFAFB28BA35DF0062FADD /* Color+Feed.swift */; };
+		D3BDFB0228BA36740062FADD /* FeedViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = D3BDFB0128BA36740062FADD /* FeedViewModel.swift */; };
+		D3BDFB0428BA49610062FADD /* Color+RGB.swift in Sources */ = {isa = PBXBuildFile; fileRef = D3BDFB0328BA49610062FADD /* Color+RGB.swift */; };
 		E907806528B09D6A0045F339 /* RazrabsApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = E907806428B09D6A0045F339 /* RazrabsApp.swift */; };
-		E907806728B09D6A0045F339 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E907806628B09D6A0045F339 /* ContentView.swift */; };
+		E907806728B09D6A0045F339 /* FeedView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E907806628B09D6A0045F339 /* FeedView.swift */; };
 		E907806928B09D6D0045F339 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = E907806828B09D6D0045F339 /* Assets.xcassets */; };
 		E907806C28B09D6D0045F339 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = E907806B28B09D6D0045F339 /* Preview Assets.xcassets */; };
 		E907808028B09D6D0045F339 /* RazrabsUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = E907807F28B09D6D0045F339 /* RazrabsUITests.swift */; };
@@ -63,9 +66,12 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		D3BDFAFB28BA35DF0062FADD /* Color+Feed.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Color+Feed.swift"; sourceTree = "<group>"; };
+		D3BDFB0128BA36740062FADD /* FeedViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FeedViewModel.swift; sourceTree = "<group>"; };
+		D3BDFB0328BA49610062FADD /* Color+RGB.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Color+RGB.swift"; sourceTree = "<group>"; };
 		E907806128B09D6A0045F339 /* Razrabs.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Razrabs.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		E907806428B09D6A0045F339 /* RazrabsApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RazrabsApp.swift; sourceTree = "<group>"; };
-		E907806628B09D6A0045F339 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
+		E907806628B09D6A0045F339 /* FeedView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FeedView.swift; sourceTree = "<group>"; };
 		E907806828B09D6D0045F339 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		E907806B28B09D6D0045F339 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		E907807128B09D6D0045F339 /* RazrabsTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = RazrabsTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -129,6 +135,24 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		D3BDFAFD28BA35E20062FADD /* Feed */ = {
+			isa = PBXGroup;
+			children = (
+				D3BDFAFE28BA365C0062FADD /* Extensions */,
+				D3BDFB0128BA36740062FADD /* FeedViewModel.swift */,
+				E907806628B09D6A0045F339 /* FeedView.swift */,
+			);
+			path = Feed;
+			sourceTree = "<group>";
+		};
+		D3BDFAFE28BA365C0062FADD /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				D3BDFAFB28BA35DF0062FADD /* Color+Feed.swift */,
+			);
+			path = Extensions;
+			sourceTree = "<group>";
+		};
 		E907805828B09D6A0045F339 = {
 			isa = PBXGroup;
 			children = (
@@ -152,8 +176,8 @@
 		E907806328B09D6A0045F339 /* Razrabs */ = {
 			isa = PBXGroup;
 			children = (
+				D3BDFAFD28BA35E20062FADD /* Feed */,
 				E907806428B09D6A0045F339 /* RazrabsApp.swift */,
-				E907806628B09D6A0045F339 /* ContentView.swift */,
 				E907809D28B0F1FB0045F339 /* Extensions */,
 				E907809128B0AC1A0045F339 /* DataModel */,
 				E907808E28B09FB50045F339 /* Services */,
@@ -224,6 +248,7 @@
 			isa = PBXGroup;
 			children = (
 				E907809E28B0F21B0045F339 /* JSONDecoder+dataModelDecoder.swift */,
+				D3BDFB0328BA49610062FADD /* Color+RGB.swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -390,15 +415,18 @@
 			buildActionMask = 2147483647;
 			files = (
 				E9BD098728B5EBFD0063CA24 /* SimplePost.swift in Sources */,
+				D3BDFB0228BA36740062FADD /* FeedViewModel.swift in Sources */,
 				E9BD099928B5F4450063CA24 /* PostOnFrontPage.swift in Sources */,
 				E907809028B09FC00045F339 /* RazrabsApi.swift in Sources */,
 				E9BD099F28B601070063CA24 /* FrontPage.swift in Sources */,
+				D3BDFB0428BA49610062FADD /* Color+RGB.swift in Sources */,
 				E90780A828B136A40045F339 /* FeedResponse.swift in Sources */,
-				E907806728B09D6A0045F339 /* ContentView.swift in Sources */,
+				E907806728B09D6A0045F339 /* FeedView.swift in Sources */,
 				E907806528B09D6A0045F339 /* RazrabsApp.swift in Sources */,
 				E9BD099328B5F1500063CA24 /* ComponentItem.swift in Sources */,
 				E907809A28B0F0470045F339 /* FeedItem.swift in Sources */,
 				E9BD098D28B5EFD30063CA24 /* Configuration.swift in Sources */,
+				D3BDFAFC28BA35DF0062FADD /* Color+Feed.swift in Sources */,
 				E907809328B0AC380045F339 /* TagItem.swift in Sources */,
 				E93EB7F628B6194500338215 /* CurrentFrontPageResponse.swift in Sources */,
 				E9BD098128B5E4450063CA24 /* Position.swift in Sources */,
@@ -579,7 +607,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_ASSET_PATHS = "\"Razrabs/Preview Content\"";
-				DEVELOPMENT_TEAM = QDTPG5DB79;
+				DEVELOPMENT_TEAM = BFLW5CDF8X;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
@@ -608,7 +636,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_ASSET_PATHS = "\"Razrabs/Preview Content\"";
-				DEVELOPMENT_TEAM = QDTPG5DB79;
+				DEVELOPMENT_TEAM = BFLW5CDF8X;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
