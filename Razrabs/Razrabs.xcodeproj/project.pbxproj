@@ -24,6 +24,11 @@
 		E90780A428B133BA0045F339 /* TagItem+Equatable.swift in Sources */ = {isa = PBXBuildFile; fileRef = E90780A328B133BA0045F339 /* TagItem+Equatable.swift */; };
 		E90780A628B1341E0045F339 /* FeedItem+Equatable.swift in Sources */ = {isa = PBXBuildFile; fileRef = E90780A528B1341E0045F339 /* FeedItem+Equatable.swift */; };
 		E90780A828B136A40045F339 /* FeedResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = E90780A728B136A40045F339 /* FeedResponse.swift */; };
+		E919B18828BE630000AB2E1C /* styrene-regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = E919B18528BE630000AB2E1C /* styrene-regular.ttf */; };
+		E919B18928BE630000AB2E1C /* styrene-medium.ttf in Resources */ = {isa = PBXBuildFile; fileRef = E919B18628BE630000AB2E1C /* styrene-medium.ttf */; };
+		E919B18A28BE630000AB2E1C /* styrene-bold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = E919B18728BE630000AB2E1C /* styrene-bold.ttf */; };
+		E919B18D28BE63FD00AB2E1C /* Font+theme.swift in Sources */ = {isa = PBXBuildFile; fileRef = E919B18C28BE63FD00AB2E1C /* Font+theme.swift */; };
+		E919B18F28BE675900AB2E1C /* PostCellView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E919B18E28BE675900AB2E1C /* PostCellView.swift */; };
 		E93EB7F128B60CE700338215 /* FrontPage+Equatable.swift in Sources */ = {isa = PBXBuildFile; fileRef = E93EB7F028B60CE700338215 /* FrontPage+Equatable.swift */; };
 		E93EB7F328B60D3800338215 /* FrontPageTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = E93EB7F228B60D3800338215 /* FrontPageTests.swift */; };
 		E93EB7F628B6194500338215 /* CurrentFrontPageResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = E93EB7F528B6194500338215 /* CurrentFrontPageResponse.swift */; };
@@ -85,6 +90,12 @@
 		E90780A328B133BA0045F339 /* TagItem+Equatable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "TagItem+Equatable.swift"; sourceTree = "<group>"; };
 		E90780A528B1341E0045F339 /* FeedItem+Equatable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "FeedItem+Equatable.swift"; sourceTree = "<group>"; };
 		E90780A728B136A40045F339 /* FeedResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FeedResponse.swift; sourceTree = "<group>"; };
+		E919B18528BE630000AB2E1C /* styrene-regular.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "styrene-regular.ttf"; sourceTree = "<group>"; };
+		E919B18628BE630000AB2E1C /* styrene-medium.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "styrene-medium.ttf"; sourceTree = "<group>"; };
+		E919B18728BE630000AB2E1C /* styrene-bold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "styrene-bold.ttf"; sourceTree = "<group>"; };
+		E919B18B28BE631200AB2E1C /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = Info.plist; sourceTree = "<group>"; };
+		E919B18C28BE63FD00AB2E1C /* Font+theme.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Font+theme.swift"; sourceTree = "<group>"; };
+		E919B18E28BE675900AB2E1C /* PostCellView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PostCellView.swift; sourceTree = "<group>"; };
 		E93EB7F028B60CE700338215 /* FrontPage+Equatable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "FrontPage+Equatable.swift"; sourceTree = "<group>"; };
 		E93EB7F228B60D3800338215 /* FrontPageTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FrontPageTests.swift; sourceTree = "<group>"; };
 		E93EB7F528B6194500338215 /* CurrentFrontPageResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CurrentFrontPageResponse.swift; sourceTree = "<group>"; };
@@ -158,8 +169,11 @@
 		E907806328B09D6A0045F339 /* Razrabs */ = {
 			isa = PBXGroup;
 			children = (
+				E919B18B28BE631200AB2E1C /* Info.plist */,
+				E919B18428BE62F300AB2E1C /* Fonts */,
 				E907806428B09D6A0045F339 /* RazrabsApp.swift */,
 				E907806628B09D6A0045F339 /* MainView.swift */,
+				E919B18E28BE675900AB2E1C /* PostCellView.swift */,
 				E907809D28B0F1FB0045F339 /* Extensions */,
 				E907809128B0AC1A0045F339 /* DataModel */,
 				E907808E28B09FB50045F339 /* Services */,
@@ -232,6 +246,7 @@
 			children = (
 				E907809E28B0F21B0045F339 /* JSONDecoder+dataModelDecoder.swift */,
 				E9ECFFA228B71FBE003682D1 /* Color+hex.swift */,
+				E919B18C28BE63FD00AB2E1C /* Font+theme.swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -250,6 +265,16 @@
 				E93EB7F028B60CE700338215 /* FrontPage+Equatable.swift */,
 			);
 			path = Extensions;
+			sourceTree = "<group>";
+		};
+		E919B18428BE62F300AB2E1C /* Fonts */ = {
+			isa = PBXGroup;
+			children = (
+				E919B18728BE630000AB2E1C /* styrene-bold.ttf */,
+				E919B18628BE630000AB2E1C /* styrene-medium.ttf */,
+				E919B18528BE630000AB2E1C /* styrene-regular.ttf */,
+			);
+			path = Fonts;
 			sourceTree = "<group>";
 		};
 		E93EB7F428B6192F00338215 /* Responses */ = {
@@ -381,7 +406,10 @@
 			buildActionMask = 2147483647;
 			files = (
 				E907806C28B09D6D0045F339 /* Preview Assets.xcassets in Resources */,
+				E919B18A28BE630000AB2E1C /* styrene-bold.ttf in Resources */,
 				E907806928B09D6D0045F339 /* Assets.xcassets in Resources */,
+				E919B18928BE630000AB2E1C /* styrene-medium.ttf in Resources */,
+				E919B18828BE630000AB2E1C /* styrene-regular.ttf in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -420,8 +448,10 @@
 				E9BD098D28B5EFD30063CA24 /* Configuration.swift in Sources */,
 				E907809328B0AC380045F339 /* TagItem.swift in Sources */,
 				E93EB7F628B6194500338215 /* CurrentFrontPageResponse.swift in Sources */,
+				E919B18D28BE63FD00AB2E1C /* Font+theme.swift in Sources */,
 				E9BD098128B5E4450063CA24 /* Position.swift in Sources */,
 				E907809F28B0F21B0045F339 /* JSONDecoder+dataModelDecoder.swift in Sources */,
+				E919B18F28BE675900AB2E1C /* PostCellView.swift in Sources */,
 				E9ECFFA628B72A0B003682D1 /* MainViewModel.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -602,6 +632,7 @@
 				DEVELOPMENT_TEAM = QDTPG5DB79;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = Razrabs/Info.plist;
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
@@ -631,6 +662,7 @@
 				DEVELOPMENT_TEAM = QDTPG5DB79;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = Razrabs/Info.plist;
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;

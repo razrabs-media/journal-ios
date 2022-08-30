@@ -28,13 +28,11 @@ struct MainView: View {
                     }
                         .padding()
                         .navigationTitle("Разрабы")
-//                    Spacer()
                     List {
-                        ForEach(0..<viewModel.posts.count) { postIndex in
-//                            viewModel.posts[postIndex].
-                            Text(postIndex.description)
+                        ForEach(viewModel.posts, id: \PostViewModel.post.uid) { post in
+                            PostCellView(post: post)
                         }
-                    }
+                    }.listStyle(.plain)
                 }
             }
             .onAppear {
@@ -46,13 +44,29 @@ struct MainView: View {
                         razrabsApi.requestCurrentFrontPage { result in
                             viewModel.isLoading = false
                             switch result {
-                            case .success(let currentFrontPageResponse):
+                            case .success(var currentFrontPageResponse):
                                 print("current front page received")
                                 viewModel.feedItems = feedResponse.data.feeds
                                 var posts = [PostViewModel]()
                                 posts.reserveCapacity(currentFrontPageResponse.data.currentFrontPage.content.count)
+                                currentFrontPageResponse.data.currentFrontPage.content.sort { lhs, rhs in
+                                    if lhs.position.y == rhs.position.y {
+                                        return lhs.position.x < rhs.position.x
+                                    } else {
+                                        return lhs.position.y < rhs.position.y
+                                    }
+                                }
                                 for postOnFrontPage in currentFrontPageResponse.data.currentFrontPage.content {
-                                    posts.append(.init(post: postOnFrontPage.post, isLarge: false))
+                                    let appearanceType: PostViewModel.AppearanceType
+                                    switch postOnFrontPage.component.configuration.w {
+                                    case 4:
+                                        appearanceType = .large
+                                    case 2:
+                                        appearanceType = .medium
+                                    default:
+                                        appearanceType = .small
+                                    }
+                                    posts.append(.init(post: postOnFrontPage.post, appearanceType: appearanceType))
                                 }
                                 viewModel.frontPage = currentFrontPageResponse.data.currentFrontPage
                                 viewModel.posts = posts
