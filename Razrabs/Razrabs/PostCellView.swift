@@ -12,7 +12,7 @@ struct PostCellView: View {
                     .frame(height: 300)
                 Text(post.post.title.uppercased())
                     .font(Font.themeRegular(with: 24))
-                    .frame(maxWidth: .infinity, maxHeight: .infinity, alignment: .center)
+                    .frame(maxWidth: .infinity, maxHeight: 300, alignment: .center)
                     .multilineTextAlignment(.center)
                     .padding()
             }
@@ -35,10 +35,9 @@ struct PostCellView: View {
                 }
                 .frame(width: 80)
                 Text(post.post.title.uppercased())
-                    .font(Font.themeRegular(with: 16))
+                    .font(Font.themeRegular(with: 14))
                     .frame(alignment: .top)
             }
-//                                .frame(height: 140)
         }
     }
 }

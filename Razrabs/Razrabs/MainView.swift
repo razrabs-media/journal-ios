@@ -5,6 +5,53 @@ struct MainView: View {
     
     @StateObject var viewModel = MainViewModel()
     
+    func requestFeed() {
+        viewModel.isLoading = true
+        razrabsApi.requestFeed(callback: { result in
+            print("feed result received")
+            switch result {
+            case .success(let feedResponse):
+                razrabsApi.requestCurrentFrontPage { result in
+                    viewModel.isLoading = false
+                    switch result {
+                    case .success(var currentFrontPageResponse):
+                        print("current front page received")
+                        viewModel.feedItems = feedResponse.data.feeds
+                        var posts = [PostViewModel]()
+                        posts.reserveCapacity(currentFrontPageResponse.data.currentFrontPage.content.count)
+                        currentFrontPageResponse.data.currentFrontPage.content.sort { lhs, rhs in
+                            if lhs.position.y == rhs.position.y {
+                                return lhs.position.x < rhs.position.x
+                            } else {
+                                return lhs.position.y < rhs.position.y
+                            }
+                        }
+                        for postOnFrontPage in currentFrontPageResponse.data.currentFrontPage.content {
+                            let appearanceType: PostViewModel.AppearanceType
+                            switch postOnFrontPage.component.configuration.w {
+                            case 4:
+                                appearanceType = .large
+                            case 2:
+                                appearanceType = .medium
+                            default:
+                                appearanceType = .small
+                            }
+                            posts.append(.init(post: postOnFrontPage.post, appearanceType: appearanceType))
+                        }
+                        viewModel.frontPage = currentFrontPageResponse.data.currentFrontPage
+                        viewModel.posts = posts
+                    case .failure(let error):
+                        print("error = \(error)")
+                    }
+                }
+            case .failure(let error):
+                print("error = \(error)")
+                viewModel.isLoading = false
+                viewModel.errorText = error.localizedDescription
+            }
+        })
+    }
+    
     var body: some View {
         NavigationView {
             VStack {
@@ -31,57 +78,20 @@ struct MainView: View {
                     List {
                         ForEach(viewModel.posts, id: \PostViewModel.post.uid) { post in
                             PostCellView(post: post)
+                                .listRowSeparator(.hidden)
                         }
-                    }.listStyle(.plain)
+                    }
+                        .listStyle(.plain)
                 }
             }
             .onAppear {
-                viewModel.isLoading = true
-                razrabsApi.requestFeed(callback: { result in
-                    print("feed result received")
-                    switch result {
-                    case .success(let feedResponse):
-                        razrabsApi.requestCurrentFrontPage { result in
-                            viewModel.isLoading = false
-                            switch result {
-                            case .success(var currentFrontPageResponse):
-                                print("current front page received")
-                                viewModel.feedItems = feedResponse.data.feeds
-                                var posts = [PostViewModel]()
-                                posts.reserveCapacity(currentFrontPageResponse.data.currentFrontPage.content.count)
-                                currentFrontPageResponse.data.currentFrontPage.content.sort { lhs, rhs in
-                                    if lhs.position.y == rhs.position.y {
-                                        return lhs.position.x < rhs.position.x
-                                    } else {
-                                        return lhs.position.y < rhs.position.y
-                                    }
-                                }
-                                for postOnFrontPage in currentFrontPageResponse.data.currentFrontPage.content {
-                                    let appearanceType: PostViewModel.AppearanceType
-                                    switch postOnFrontPage.component.configuration.w {
-                                    case 4:
-                                        appearanceType = .large
-                                    case 2:
-                                        appearanceType = .medium
-                                    default:
-                                        appearanceType = .small
-                                    }
-                                    posts.append(.init(post: postOnFrontPage.post, appearanceType: appearanceType))
-                                }
-                                viewModel.frontPage = currentFrontPageResponse.data.currentFrontPage
-                                viewModel.posts = posts
-                                for post in viewModel.frontPage!.content {
-                                    print("post \(post.post.title.prefix(15)) at \(post.position), \(post.component.configuration)")
-                                }
-                            case .failure(let error):
-                                print("error = \(error)")
-                            }
-                        }
-                    case .failure(let error):
-                        print("error = \(error)")
-                        viewModel.isLoading = false
-                    }
-                })
+                requestFeed()
+            }.alert(viewModel.errorText, isPresented: $viewModel.errorIsPresented) {
+                Button("Retry", role: .cancel) {
+                    viewModel.errorIsPresented = false
+                    viewModel.errorText = ""
+                    requestFeed()
+                }
             }
         }
     }

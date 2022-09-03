@@ -5,4 +5,6 @@ import Foundation
     @Published var posts = [PostViewModel]()
     @Published var feedItems = [FeedItem]()
     @Published var frontPage: FrontPage?
+    @Published var errorText = ""
+    @Published var errorIsPresented = false
 }
