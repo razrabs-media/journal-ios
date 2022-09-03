@@ -42,12 +42,16 @@ struct MainView: View {
                         viewModel.posts = posts
                     case .failure(let error):
                         print("error = \(error)")
+                        viewModel.isLoading = false
+                        viewModel.errorText = error.localizedDescription
+                        viewModel.isErrorPresented = true
                     }
                 }
             case .failure(let error):
                 print("error = \(error)")
                 viewModel.isLoading = false
                 viewModel.errorText = error.localizedDescription
+                viewModel.isErrorPresented = true
             }
         })
     }
@@ -86,9 +90,9 @@ struct MainView: View {
             }
             .onAppear {
                 requestFeed()
-            }.alert(viewModel.errorText, isPresented: $viewModel.errorIsPresented) {
+            }.alert(viewModel.errorText, isPresented: $viewModel.isErrorPresented) {
                 Button("Retry", role: .cancel) {
-                    viewModel.errorIsPresented = false
+                    viewModel.isErrorPresented = false
                     viewModel.errorText = ""
                     requestFeed()
                 }

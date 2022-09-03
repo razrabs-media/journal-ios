@@ -6,5 +6,5 @@ import Foundation
     @Published var feedItems = [FeedItem]()
     @Published var frontPage: FrontPage?
     @Published var errorText = ""
-    @Published var errorIsPresented = false
+    @Published var isErrorPresented = false
 }

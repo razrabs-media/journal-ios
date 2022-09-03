@@ -18,9 +18,18 @@ struct PostCellView: View {
             }
         case .medium:
             VStack {
-                Rectangle()
-                    .foregroundColor(.gray)
-                    .frame(height: 200)
+                AsyncImage(url: .init(string: post.post.previewUrl),
+                           content: { image in
+                    image.resizable()
+                        .aspectRatio(contentMode: .fill)
+                        .frame(maxWidth: .infinity, maxHeight: 200)
+                        .aspectRatio(CGFloat(651) / CGFloat(369), contentMode: .fill)
+                }, placeholder: {
+                    Rectangle()
+                        .foregroundColor(.gray)
+                        .frame(maxHeight: 200)
+                        .aspectRatio(CGFloat(651) / CGFloat(369), contentMode: .fill)
+                })
                 Text(post.post.title.uppercased())
                     .font(Font.themeRegular(with: 16))
                     .frame(maxWidth: .infinity, maxHeight: .infinity, alignment: .leading)
@@ -28,9 +37,17 @@ struct PostCellView: View {
         case .small:
             HStack {
                 VStack {
-                    Rectangle()
-                        .foregroundColor(.gray)
-                        .frame(height: 50)
+                    AsyncImage(url: .init(string: post.post.previewUrl)) { image in
+                        image.resizable()
+                            .aspectRatio(contentMode: .fill)
+                            .frame(maxWidth: 80, maxHeight: 50)
+                            .aspectRatio(CGFloat(651) / CGFloat(369), contentMode: .fill)
+                            .padding([.leading, .trailing], 4)
+                    } placeholder: {
+                        Rectangle()
+                            .foregroundColor(.gray)
+                            .frame(height: 50)
+                    }
                     Spacer()
                 }
                 .frame(width: 80)
