@@ -68,11 +68,18 @@ struct MainView: View {
                             ForEach(viewModel.feedItems, id: \FeedItem.uid) { feedItem in
                                 Button {
                                     print("feed item \(feedItem.name) selected")
+                                    if feedItem.uid != viewModel.selectedFeedItemUid {
+                                        viewModel.selectedFeedItemUid = feedItem.uid
+                                    } else {
+                                        viewModel.selectedFeedItemUid = ""
+                                    }
                                 } label: {
-                                    Text(feedItem.name)
-                                        .background(Color("FeedItemBack"))
-                                        .foregroundColor(Color("FeedItemFore"))
-                                        .padding(2)
+                                    let isCurrentItemSelected = feedItem.uid == viewModel.selectedFeedItemUid
+                                    Text(feedItem.name.uppercased())
+                                        .padding(6)
+                                        .font(Font.themeRegular(with: 14))
+                                        .background(isCurrentItemSelected ? Color("FeedItemBackSelected") : Color("FeedItemBack"))
+                                        .foregroundColor(isCurrentItemSelected ? Color("FeedItemForeSelected") : Color("FeedItemFore"))
                                 }
                             }
                         }

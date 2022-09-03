@@ -7,4 +7,5 @@ import Foundation
     @Published var frontPage: FrontPage?
     @Published var errorText = ""
     @Published var isErrorPresented = false
+    @Published var selectedFeedItemUid = ""
 }
