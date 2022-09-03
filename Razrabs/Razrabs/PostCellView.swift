@@ -21,9 +21,8 @@ struct PostCellView: View {
                 AsyncImage(url: .init(string: post.post.previewUrl),
                            content: { image in
                     image.resizable()
-                        .aspectRatio(contentMode: .fill)
+                        .scaledToFill()
                         .frame(maxWidth: .infinity, maxHeight: 200)
-                        .aspectRatio(CGFloat(651) / CGFloat(369), contentMode: .fill)
                 }, placeholder: {
                     Rectangle()
                         .foregroundColor(.gray)
@@ -39,10 +38,9 @@ struct PostCellView: View {
                 VStack {
                     AsyncImage(url: .init(string: post.post.previewUrl)) { image in
                         image.resizable()
-                            .aspectRatio(contentMode: .fill)
-                            .frame(maxWidth: 80, maxHeight: 50)
-                            .aspectRatio(CGFloat(651) / CGFloat(369), contentMode: .fill)
-                            .padding([.leading, .trailing], 4)
+                            .scaledToFill()
+                            .frame(width: 80, height: 50)
+                            .clipped()
                     } placeholder: {
                         Rectangle()
                             .foregroundColor(.gray)
