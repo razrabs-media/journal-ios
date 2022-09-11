@@ -32,6 +32,13 @@
 		E93EB7F128B60CE700338215 /* FrontPage+Equatable.swift in Sources */ = {isa = PBXBuildFile; fileRef = E93EB7F028B60CE700338215 /* FrontPage+Equatable.swift */; };
 		E93EB7F328B60D3800338215 /* FrontPageTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = E93EB7F228B60D3800338215 /* FrontPageTests.swift */; };
 		E93EB7F628B6194500338215 /* CurrentFrontPageResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = E93EB7F528B6194500338215 /* CurrentFrontPageResponse.swift */; };
+		E99B0C5B28CE736600ABA943 /* GithubAuthor.swift in Sources */ = {isa = PBXBuildFile; fileRef = E99B0C5A28CE736600ABA943 /* GithubAuthor.swift */; };
+		E99B0C5D28CE749000ABA943 /* ProfileItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = E99B0C5C28CE749000ABA943 /* ProfileItem.swift */; };
+		E99B0C5F28CE74C900ABA943 /* ProfileItemTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = E99B0C5E28CE74C900ABA943 /* ProfileItemTests.swift */; };
+		E99B0C6128CE757A00ABA943 /* ProfileItem+Equatable.swift in Sources */ = {isa = PBXBuildFile; fileRef = E99B0C6028CE757A00ABA943 /* ProfileItem+Equatable.swift */; };
+		E99B8F3B28C3B13E00DE670F /* SinglePostView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E99B8F3A28C3B13E00DE670F /* SinglePostView.swift */; };
+		E9BB5EE928CC80B1005AF67C /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = E9BB5EE828CC80B1005AF67C /* Localizable.strings */; };
+		E9BB5EEB28CD0022005AF67C /* Color+predefinedColors.swift in Sources */ = {isa = PBXBuildFile; fileRef = E9BB5EEA28CD0022005AF67C /* Color+predefinedColors.swift */; };
 		E9BD098128B5E4450063CA24 /* Position.swift in Sources */ = {isa = PBXBuildFile; fileRef = E9BD098028B5E4450063CA24 /* Position.swift */; };
 		E9BD098328B5E4970063CA24 /* PositionTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = E9BD098228B5E4970063CA24 /* PositionTests.swift */; };
 		E9BD098528B5E4E20063CA24 /* Position+Equatable.swift in Sources */ = {isa = PBXBuildFile; fileRef = E9BD098428B5E4E20063CA24 /* Position+Equatable.swift */; };
@@ -99,6 +106,13 @@
 		E93EB7F028B60CE700338215 /* FrontPage+Equatable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "FrontPage+Equatable.swift"; sourceTree = "<group>"; };
 		E93EB7F228B60D3800338215 /* FrontPageTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FrontPageTests.swift; sourceTree = "<group>"; };
 		E93EB7F528B6194500338215 /* CurrentFrontPageResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CurrentFrontPageResponse.swift; sourceTree = "<group>"; };
+		E99B0C5A28CE736600ABA943 /* GithubAuthor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GithubAuthor.swift; sourceTree = "<group>"; };
+		E99B0C5C28CE749000ABA943 /* ProfileItem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileItem.swift; sourceTree = "<group>"; };
+		E99B0C5E28CE74C900ABA943 /* ProfileItemTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileItemTests.swift; sourceTree = "<group>"; };
+		E99B0C6028CE757A00ABA943 /* ProfileItem+Equatable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "ProfileItem+Equatable.swift"; sourceTree = "<group>"; };
+		E99B8F3A28C3B13E00DE670F /* SinglePostView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SinglePostView.swift; sourceTree = "<group>"; };
+		E9BB5EE828CC80B1005AF67C /* Localizable.strings */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; path = Localizable.strings; sourceTree = "<group>"; };
+		E9BB5EEA28CD0022005AF67C /* Color+predefinedColors.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Color+predefinedColors.swift"; sourceTree = "<group>"; };
 		E9BD098028B5E4450063CA24 /* Position.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Position.swift; sourceTree = "<group>"; };
 		E9BD098228B5E4970063CA24 /* PositionTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PositionTests.swift; sourceTree = "<group>"; };
 		E9BD098428B5E4E20063CA24 /* Position+Equatable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Position+Equatable.swift"; sourceTree = "<group>"; };
@@ -173,12 +187,14 @@
 				E919B18428BE62F300AB2E1C /* Fonts */,
 				E907806428B09D6A0045F339 /* RazrabsApp.swift */,
 				E907806628B09D6A0045F339 /* MainView.swift */,
+				E99B8F3A28C3B13E00DE670F /* SinglePostView.swift */,
 				E919B18E28BE675900AB2E1C /* PostCellView.swift */,
 				E907809D28B0F1FB0045F339 /* Extensions */,
 				E907809128B0AC1A0045F339 /* DataModel */,
 				E907808E28B09FB50045F339 /* Services */,
 				E907806828B09D6D0045F339 /* Assets.xcassets */,
 				E907806A28B09D6D0045F339 /* Preview Content */,
+				E9BB5EE828CC80B1005AF67C /* Localizable.strings */,
 			);
 			path = Razrabs;
 			sourceTree = "<group>";
@@ -203,6 +219,7 @@
 				E9BD099628B5F1D80063CA24 /* ComponentItemTests.swift */,
 				E9BD099C28B5F6AA0063CA24 /* PostOnFrontPageTests.swift */,
 				E93EB7F228B60D3800338215 /* FrontPageTests.swift */,
+				E99B0C5E28CE74C900ABA943 /* ProfileItemTests.swift */,
 			);
 			path = RazrabsTests;
 			sourceTree = "<group>";
@@ -230,6 +247,7 @@
 				E9ECFFA428B7291E003682D1 /* ViewModel */,
 				E93EB7F428B6192F00338215 /* Responses */,
 				E907809228B0AC380045F339 /* TagItem.swift */,
+				E99B0C5A28CE736600ABA943 /* GithubAuthor.swift */,
 				E907809928B0F0470045F339 /* FeedItem.swift */,
 				E9BD098028B5E4450063CA24 /* Position.swift */,
 				E9BD098628B5EBFD0063CA24 /* SimplePost.swift */,
@@ -237,6 +255,7 @@
 				E9BD099228B5F1500063CA24 /* ComponentItem.swift */,
 				E9BD099828B5F4450063CA24 /* PostOnFrontPage.swift */,
 				E9BD099E28B601070063CA24 /* FrontPage.swift */,
+				E99B0C5C28CE749000ABA943 /* ProfileItem.swift */,
 			);
 			path = DataModel;
 			sourceTree = "<group>";
@@ -247,6 +266,7 @@
 				E907809E28B0F21B0045F339 /* JSONDecoder+dataModelDecoder.swift */,
 				E9ECFFA228B71FBE003682D1 /* Color+hex.swift */,
 				E919B18C28BE63FD00AB2E1C /* Font+theme.swift */,
+				E9BB5EEA28CD0022005AF67C /* Color+predefinedColors.swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -263,6 +283,7 @@
 				E9BD099428B5F1900063CA24 /* ComponentItem+Equatable.swift */,
 				E9BD099A28B5F6630063CA24 /* PostOnFrontPage+Equatable.swift */,
 				E93EB7F028B60CE700338215 /* FrontPage+Equatable.swift */,
+				E99B0C6028CE757A00ABA943 /* ProfileItem+Equatable.swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -406,6 +427,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				E907806C28B09D6D0045F339 /* Preview Assets.xcassets in Resources */,
+				E9BB5EE928CC80B1005AF67C /* Localizable.strings in Resources */,
 				E919B18A28BE630000AB2E1C /* styrene-bold.ttf in Resources */,
 				E907806928B09D6D0045F339 /* Assets.xcassets in Resources */,
 				E919B18928BE630000AB2E1C /* styrene-medium.ttf in Resources */,
@@ -442,16 +464,20 @@
 				E907806728B09D6A0045F339 /* MainView.swift in Sources */,
 				E9ECFFA828B72A2E003682D1 /* PostViewModel.swift in Sources */,
 				E9ECFFA328B71FBE003682D1 /* Color+hex.swift in Sources */,
+				E99B0C5D28CE749000ABA943 /* ProfileItem.swift in Sources */,
 				E907806528B09D6A0045F339 /* RazrabsApp.swift in Sources */,
 				E9BD099328B5F1500063CA24 /* ComponentItem.swift in Sources */,
+				E9BB5EEB28CD0022005AF67C /* Color+predefinedColors.swift in Sources */,
 				E907809A28B0F0470045F339 /* FeedItem.swift in Sources */,
 				E9BD098D28B5EFD30063CA24 /* Configuration.swift in Sources */,
 				E907809328B0AC380045F339 /* TagItem.swift in Sources */,
 				E93EB7F628B6194500338215 /* CurrentFrontPageResponse.swift in Sources */,
+				E99B0C5B28CE736600ABA943 /* GithubAuthor.swift in Sources */,
 				E919B18D28BE63FD00AB2E1C /* Font+theme.swift in Sources */,
 				E9BD098128B5E4450063CA24 /* Position.swift in Sources */,
 				E907809F28B0F21B0045F339 /* JSONDecoder+dataModelDecoder.swift in Sources */,
 				E919B18F28BE675900AB2E1C /* PostCellView.swift in Sources */,
+				E99B8F3B28C3B13E00DE670F /* SinglePostView.swift in Sources */,
 				E9ECFFA628B72A0B003682D1 /* MainViewModel.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -462,6 +488,8 @@
 			files = (
 				E9BD099128B5F0480063CA24 /* ConfigurationTests.swift in Sources */,
 				E9BD098528B5E4E20063CA24 /* Position+Equatable.swift in Sources */,
+				E99B0C6128CE757A00ABA943 /* ProfileItem+Equatable.swift in Sources */,
+				E99B0C5F28CE74C900ABA943 /* ProfileItemTests.swift in Sources */,
 				E9BD098328B5E4970063CA24 /* PositionTests.swift in Sources */,
 				E93EB7F328B60D3800338215 /* FrontPageTests.swift in Sources */,
 				E90780A428B133BA0045F339 /* TagItem+Equatable.swift in Sources */,

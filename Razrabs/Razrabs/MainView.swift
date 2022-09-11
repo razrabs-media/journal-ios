@@ -59,7 +59,7 @@ struct MainView: View {
     var body: some View {
         NavigationView {
             VStack {
-                if viewModel.isLoading {
+                if viewModel.isLoading && viewModel.posts.isEmpty {
                     ProgressView()
                         .progressViewStyle(CircularProgressViewStyle())
                 } else {
@@ -90,6 +90,11 @@ struct MainView: View {
                         ForEach(viewModel.posts, id: \PostViewModel.post.uid) { post in
                             PostCellView(post: post)
                                 .listRowSeparator(.hidden)
+                                .background(NavigationLink {
+                                    SinglePostView(post: post.post)
+                                } label: {
+                                    EmptyView()
+                                })
                         }
                     }
                         .listStyle(.plain)

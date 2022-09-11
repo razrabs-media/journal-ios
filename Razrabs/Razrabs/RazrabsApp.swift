@@ -7,14 +7,9 @@ struct RazrabsApp: App {
     var body: some Scene {
         WindowGroup {
             MainView(razrabsApi: razrabsApi).onAppear {
-                /*let themeRegularFont = UIFont(name: "StyreneBLCWeb-Regular", size: 12)
-                let themeMediumFont = UIFont(name: "StyreneBLCWeb-Medium", size: 12)
-                let themeBoldFont = UIFont(name: "StyreneBLCWeb-Bold", size: 12)
-                for familyName in UIFont.familyNames {
-                    for font in UIFont.fontNames(forFamilyName: familyName) {
-                        print("font = \(font)")
-                    }
-                }*/
+//                UINavigationBar.appearance().tintColor = .clear
+//                UINavigationBar.appearance().backIndicatorImage = UIImage(named: "back")?.withRenderingMode(.alwaysOriginal)
+//                UINavigationBar.appearance().backIndicatorTransitionMaskImage = UIImage(named: "back")?.withRenderingMode(.alwaysOriginal)
             }
         }
     }
