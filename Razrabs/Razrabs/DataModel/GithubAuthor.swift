@@ -8,5 +8,6 @@ struct GithubAuthor: Codable {
     var avatarUrl: String?
     var name: String?
     var postsCount = Float(0)
-    
+    //  user
+    //  posts
 }

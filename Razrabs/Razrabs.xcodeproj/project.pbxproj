@@ -35,6 +35,8 @@
 		E96F108128CFD54400D2FECB /* PostInteractions.swift in Sources */ = {isa = PBXBuildFile; fileRef = E96F108028CFD54400D2FECB /* PostInteractions.swift */; };
 		E96F108328CFD57700D2FECB /* PostInteractions+Equatable.swift in Sources */ = {isa = PBXBuildFile; fileRef = E96F108228CFD57700D2FECB /* PostInteractions+Equatable.swift */; };
 		E96F108528CFD5E800D2FECB /* PostInteractionsTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = E96F108428CFD5E800D2FECB /* PostInteractionsTests.swift */; };
+		E96F108728CFD78500D2FECB /* GithubAuthorTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = E96F108628CFD78500D2FECB /* GithubAuthorTests.swift */; };
+		E96F108928CFD81C00D2FECB /* GithubAuthor+Equatable.swift in Sources */ = {isa = PBXBuildFile; fileRef = E96F108828CFD81C00D2FECB /* GithubAuthor+Equatable.swift */; };
 		E99B0C5B28CE736600ABA943 /* GithubAuthor.swift in Sources */ = {isa = PBXBuildFile; fileRef = E99B0C5A28CE736600ABA943 /* GithubAuthor.swift */; };
 		E99B0C5D28CE749000ABA943 /* ProfileItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = E99B0C5C28CE749000ABA943 /* ProfileItem.swift */; };
 		E99B0C5F28CE74C900ABA943 /* ProfileItemTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = E99B0C5E28CE74C900ABA943 /* ProfileItemTests.swift */; };
@@ -115,6 +117,8 @@
 		E96F108028CFD54400D2FECB /* PostInteractions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PostInteractions.swift; sourceTree = "<group>"; };
 		E96F108228CFD57700D2FECB /* PostInteractions+Equatable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "PostInteractions+Equatable.swift"; sourceTree = "<group>"; };
 		E96F108428CFD5E800D2FECB /* PostInteractionsTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PostInteractionsTests.swift; sourceTree = "<group>"; };
+		E96F108628CFD78500D2FECB /* GithubAuthorTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GithubAuthorTests.swift; sourceTree = "<group>"; };
+		E96F108828CFD81C00D2FECB /* GithubAuthor+Equatable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "GithubAuthor+Equatable.swift"; sourceTree = "<group>"; };
 		E99B0C5A28CE736600ABA943 /* GithubAuthor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GithubAuthor.swift; sourceTree = "<group>"; };
 		E99B0C5C28CE749000ABA943 /* ProfileItem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileItem.swift; sourceTree = "<group>"; };
 		E99B0C5E28CE74C900ABA943 /* ProfileItemTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileItemTests.swift; sourceTree = "<group>"; };
@@ -234,6 +238,7 @@
 				E99B0C5E28CE74C900ABA943 /* ProfileItemTests.swift */,
 				E99B0C6628CE98C400ABA943 /* CommentItemTests.swift */,
 				E96F108428CFD5E800D2FECB /* PostInteractionsTests.swift */,
+				E96F108628CFD78500D2FECB /* GithubAuthorTests.swift */,
 			);
 			path = RazrabsTests;
 			sourceTree = "<group>";
@@ -302,6 +307,7 @@
 				E99B0C6028CE757A00ABA943 /* ProfileItem+Equatable.swift */,
 				E99B0C6428CE986E00ABA943 /* CommentItem+Equatable.swift */,
 				E96F108228CFD57700D2FECB /* PostInteractions+Equatable.swift */,
+				E96F108828CFD81C00D2FECB /* GithubAuthor+Equatable.swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -515,6 +521,7 @@
 				E93EB7F328B60D3800338215 /* FrontPageTests.swift in Sources */,
 				E90780A428B133BA0045F339 /* TagItem+Equatable.swift in Sources */,
 				E9BD099B28B5F6630063CA24 /* PostOnFrontPage+Equatable.swift in Sources */,
+				E96F108928CFD81C00D2FECB /* GithubAuthor+Equatable.swift in Sources */,
 				E9BD098B28B5ECE60063CA24 /* SimplePostTests.swift in Sources */,
 				E9BD099528B5F1900063CA24 /* ComponentItem+Equatable.swift in Sources */,
 				E90780A628B1341E0045F339 /* FeedItem+Equatable.swift in Sources */,
@@ -525,6 +532,7 @@
 				E90780A228B12AC40045F339 /* Date+iso.swift in Sources */,
 				E99B0C6528CE986E00ABA943 /* CommentItem+Equatable.swift in Sources */,
 				E907809C28B0F1340045F339 /* FeedItemTests.swift in Sources */,
+				E96F108728CFD78500D2FECB /* GithubAuthorTests.swift in Sources */,
 				E9BD099728B5F1D80063CA24 /* ComponentItemTests.swift in Sources */,
 				E907809528B0ACA60045F339 /* TagItemTests.swift in Sources */,
 				E9BD099D28B5F6AA0063CA24 /* PostOnFrontPageTests.swift in Sources */,
