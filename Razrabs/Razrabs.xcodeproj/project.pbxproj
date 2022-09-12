@@ -32,6 +32,9 @@
 		E93EB7F128B60CE700338215 /* FrontPage+Equatable.swift in Sources */ = {isa = PBXBuildFile; fileRef = E93EB7F028B60CE700338215 /* FrontPage+Equatable.swift */; };
 		E93EB7F328B60D3800338215 /* FrontPageTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = E93EB7F228B60D3800338215 /* FrontPageTests.swift */; };
 		E93EB7F628B6194500338215 /* CurrentFrontPageResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = E93EB7F528B6194500338215 /* CurrentFrontPageResponse.swift */; };
+		E96F108128CFD54400D2FECB /* PostInteractions.swift in Sources */ = {isa = PBXBuildFile; fileRef = E96F108028CFD54400D2FECB /* PostInteractions.swift */; };
+		E96F108328CFD57700D2FECB /* PostInteractions+Equatable.swift in Sources */ = {isa = PBXBuildFile; fileRef = E96F108228CFD57700D2FECB /* PostInteractions+Equatable.swift */; };
+		E96F108528CFD5E800D2FECB /* PostInteractionsTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = E96F108428CFD5E800D2FECB /* PostInteractionsTests.swift */; };
 		E99B0C5B28CE736600ABA943 /* GithubAuthor.swift in Sources */ = {isa = PBXBuildFile; fileRef = E99B0C5A28CE736600ABA943 /* GithubAuthor.swift */; };
 		E99B0C5D28CE749000ABA943 /* ProfileItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = E99B0C5C28CE749000ABA943 /* ProfileItem.swift */; };
 		E99B0C5F28CE74C900ABA943 /* ProfileItemTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = E99B0C5E28CE74C900ABA943 /* ProfileItemTests.swift */; };
@@ -109,6 +112,9 @@
 		E93EB7F028B60CE700338215 /* FrontPage+Equatable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "FrontPage+Equatable.swift"; sourceTree = "<group>"; };
 		E93EB7F228B60D3800338215 /* FrontPageTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FrontPageTests.swift; sourceTree = "<group>"; };
 		E93EB7F528B6194500338215 /* CurrentFrontPageResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CurrentFrontPageResponse.swift; sourceTree = "<group>"; };
+		E96F108028CFD54400D2FECB /* PostInteractions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PostInteractions.swift; sourceTree = "<group>"; };
+		E96F108228CFD57700D2FECB /* PostInteractions+Equatable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "PostInteractions+Equatable.swift"; sourceTree = "<group>"; };
+		E96F108428CFD5E800D2FECB /* PostInteractionsTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PostInteractionsTests.swift; sourceTree = "<group>"; };
 		E99B0C5A28CE736600ABA943 /* GithubAuthor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GithubAuthor.swift; sourceTree = "<group>"; };
 		E99B0C5C28CE749000ABA943 /* ProfileItem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileItem.swift; sourceTree = "<group>"; };
 		E99B0C5E28CE74C900ABA943 /* ProfileItemTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileItemTests.swift; sourceTree = "<group>"; };
@@ -227,6 +233,7 @@
 				E93EB7F228B60D3800338215 /* FrontPageTests.swift */,
 				E99B0C5E28CE74C900ABA943 /* ProfileItemTests.swift */,
 				E99B0C6628CE98C400ABA943 /* CommentItemTests.swift */,
+				E96F108428CFD5E800D2FECB /* PostInteractionsTests.swift */,
 			);
 			path = RazrabsTests;
 			sourceTree = "<group>";
@@ -264,6 +271,7 @@
 				E9BD099E28B601070063CA24 /* FrontPage.swift */,
 				E99B0C5C28CE749000ABA943 /* ProfileItem.swift */,
 				E99B0C6228CE8F3B00ABA943 /* CommentItem.swift */,
+				E96F108028CFD54400D2FECB /* PostInteractions.swift */,
 			);
 			path = DataModel;
 			sourceTree = "<group>";
@@ -293,6 +301,7 @@
 				E93EB7F028B60CE700338215 /* FrontPage+Equatable.swift */,
 				E99B0C6028CE757A00ABA943 /* ProfileItem+Equatable.swift */,
 				E99B0C6428CE986E00ABA943 /* CommentItem+Equatable.swift */,
+				E96F108228CFD57700D2FECB /* PostInteractions+Equatable.swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -471,6 +480,7 @@
 				E9BD099F28B601070063CA24 /* FrontPage.swift in Sources */,
 				E90780A828B136A40045F339 /* FeedResponse.swift in Sources */,
 				E907806728B09D6A0045F339 /* MainView.swift in Sources */,
+				E96F108128CFD54400D2FECB /* PostInteractions.swift in Sources */,
 				E9ECFFA828B72A2E003682D1 /* PostViewModel.swift in Sources */,
 				E9ECFFA328B71FBE003682D1 /* Color+hex.swift in Sources */,
 				E99B0C5D28CE749000ABA943 /* ProfileItem.swift in Sources */,
@@ -498,6 +508,7 @@
 			files = (
 				E9BD099128B5F0480063CA24 /* ConfigurationTests.swift in Sources */,
 				E9BD098528B5E4E20063CA24 /* Position+Equatable.swift in Sources */,
+				E96F108328CFD57700D2FECB /* PostInteractions+Equatable.swift in Sources */,
 				E99B0C6128CE757A00ABA943 /* ProfileItem+Equatable.swift in Sources */,
 				E99B0C5F28CE74C900ABA943 /* ProfileItemTests.swift in Sources */,
 				E9BD098328B5E4970063CA24 /* PositionTests.swift in Sources */,
@@ -507,6 +518,7 @@
 				E9BD098B28B5ECE60063CA24 /* SimplePostTests.swift in Sources */,
 				E9BD099528B5F1900063CA24 /* ComponentItem+Equatable.swift in Sources */,
 				E90780A628B1341E0045F339 /* FeedItem+Equatable.swift in Sources */,
+				E96F108528CFD5E800D2FECB /* PostInteractionsTests.swift in Sources */,
 				E9BD098F28B5F0070063CA24 /* Configuration+Equatable.swift in Sources */,
 				E93EB7F128B60CE700338215 /* FrontPage+Equatable.swift in Sources */,
 				E9BD098928B5EC790063CA24 /* SimplePost+Equatable.swift in Sources */,
