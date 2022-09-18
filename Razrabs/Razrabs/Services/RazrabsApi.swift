@@ -50,6 +50,30 @@ class RazrabsApi {
         task.resume()
     }
     
+    func requestPost(with uid: String, callback: @escaping (_ result: Result<PostResponse, Swift.Error>) -> Void) {
+        var urlComponents = URLComponents()
+        urlComponents.scheme = scheme
+        urlComponents.host = host
+        urlComponents.path = "/gql"
+        guard let url = urlComponents.url else {
+            fatalError()
+        }
+        var urlRequest = URLRequest(url: url)
+        urlRequest.addValue("application/json", forHTTPHeaderField: "Content-Type")
+        urlRequest.addValue("application/json", forHTTPHeaderField: "Accept")
+        urlRequest.addValue("1", forHTTPHeaderField: "DNT")
+        urlRequest.addValue("https://api.razrabs.ru", forHTTPHeaderField: "Origin")
+        urlRequest.httpMethod = "POST"
+        let jsonDictionary = [
+            "query" : "{post(uid: \"\(uid)\") { uid createdAt updatedAt title readingTime previewUrl content description status tags {uid createdAt updatedAt name description}githubAuthor {uid createdAt updatedAt usernameUrl avatarUrl name postsCount user {uid createdAt updatedAt login isTransportPassword status profileUid profile {uid createdAt updatedAt fullName publicName email avatarUrl commentsCount}userGroups{uid createdAt updatedAt name}}}interactions {sharesCount viewsCount}comments {uid createdAt updatedAt content author {uid createdAt updatedAt fullName publicName avatarUrl commentsCount}content}}}",
+        ]
+        guard let jsonData = try? JSONSerialization.data(withJSONObject: jsonDictionary, options: []) else {
+            fatalError()
+        }
+        urlRequest.httpBody = jsonData
+        makeRequest(urlRequest: urlRequest, callback: callback)
+    }
+    
     func requestCurrentFrontPage(callback: @escaping (_ result: Result<CurrentFrontPageResponse, Swift.Error>) -> Void) {
         var urlComponents = URLComponents()
         urlComponents.scheme = scheme

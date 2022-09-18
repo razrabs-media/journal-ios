@@ -10,11 +10,18 @@ struct PostCellView: View {
                 Rectangle()
                     .strokeBorder(Color(.black))
                     .frame(height: 300)
-                Text(post.post.title.uppercased())
-                    .font(Font.themeRegular(with: 24))
-                    .frame(maxWidth: .infinity, maxHeight: 300, alignment: .center)
-                    .multilineTextAlignment(.center)
-                    .padding()
+                VStack {
+                    Spacer()
+                    Text(post.post.title.uppercased())
+                        .font(Font.themeRegular(with: 24))
+                        .frame(maxWidth: .infinity, maxHeight: 300, alignment: .center)
+                        .multilineTextAlignment(.center)
+                        .padding([.leading, .trailing])
+                    Text(post.createdAtString)
+                        .font(Font.themeRegular(with: 14))
+                        .foregroundColor(Color("FeedItemFore"))
+                    Spacer()
+                }
             }
         case .medium:
             VStack {
@@ -23,6 +30,7 @@ struct PostCellView: View {
                     image.resizable()
                         .scaledToFill()
                         .frame(maxWidth: .infinity, maxHeight: 200)
+                        .clipped()
                 }, placeholder: {
                     Rectangle()
                         .foregroundColor(.gray)
@@ -31,7 +39,14 @@ struct PostCellView: View {
                 })
                 Text(post.post.title.uppercased())
                     .font(Font.themeRegular(with: 16))
-                    .frame(maxWidth: .infinity, maxHeight: .infinity, alignment: .leading)
+                    .frame(maxWidth: .infinity, alignment: .leading)
+                    .fixedSize(horizontal: false, vertical: true)
+                HStack {
+                    Text(post.createdAtString)
+                        .font(Font.themeRegular(with: 14))
+                        .foregroundColor(Color("FeedItemFore"))
+                    Spacer()
+                }
             }
         case .small:
             HStack {
@@ -49,9 +64,17 @@ struct PostCellView: View {
                     Spacer()
                 }
                 .frame(width: 80)
-                Text(post.post.title.uppercased())
-                    .font(Font.themeRegular(with: 14))
-                    .frame(alignment: .top)
+                VStack {
+                    Text(post.post.title.uppercased())
+                        .font(Font.themeRegular(with: 14))
+                        .frame(alignment: .top)
+                    HStack {
+                        Text(post.createdAtString)
+                            .font(Font.themeRegular(with: 14))
+                            .foregroundColor(Color("FeedItemFore"))
+                        Spacer()
+                    }
+                }
             }
         }
     }

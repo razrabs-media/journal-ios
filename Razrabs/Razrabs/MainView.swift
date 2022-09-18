@@ -8,7 +8,7 @@ struct MainView: View {
     func requestFeed() {
         viewModel.isLoading = true
         razrabsApi.requestFeed(callback: { result in
-            print("feed result received")
+//            print("feed result received")
             switch result {
             case .success(let feedResponse):
                 razrabsApi.requestCurrentFrontPage { result in
@@ -36,7 +36,7 @@ struct MainView: View {
                             default:
                                 appearanceType = .small
                             }
-                            posts.append(.init(post: postOnFrontPage.post, appearanceType: appearanceType))
+                            posts.append(PostViewModel(post: postOnFrontPage.post, appearanceType: appearanceType))
                         }
                         viewModel.frontPage = currentFrontPageResponse.data.currentFrontPage
                         viewModel.posts = posts
@@ -56,6 +56,27 @@ struct MainView: View {
         })
     }
     
+    struct TagView: View {
+        let feedItem: FeedItem
+        let action: () -> Void
+        
+//        @State var isSelected = false
+        
+        var body: some View {
+            Button {
+                action()
+            } label: {
+//                let isCurrentItemSelected = feedItem.uid == viewModel.selectedFeedItemUid
+                let isCurrentItemSelected = false   //  TODO
+                Text(feedItem.name.uppercased())
+                    .padding(6)
+                    .font(Font.themeRegular(with: 14))
+                    .background(isCurrentItemSelected ? Color("FeedItemBackSelected") : Color("FeedItemBack"))
+                    .foregroundColor(isCurrentItemSelected ? Color("FeedItemForeSelected") : Color("FeedItemFore"))
+            }
+        }
+    }
+    
     var body: some View {
         NavigationView {
             VStack {
@@ -66,20 +87,13 @@ struct MainView: View {
                     ScrollView(.horizontal) {
                         HStack {
                             ForEach(viewModel.feedItems, id: \FeedItem.uid) { feedItem in
-                                Button {
+                                TagView(feedItem: feedItem) {
                                     print("feed item \(feedItem.name) selected")
                                     if feedItem.uid != viewModel.selectedFeedItemUid {
                                         viewModel.selectedFeedItemUid = feedItem.uid
                                     } else {
                                         viewModel.selectedFeedItemUid = ""
                                     }
-                                } label: {
-                                    let isCurrentItemSelected = feedItem.uid == viewModel.selectedFeedItemUid
-                                    Text(feedItem.name.uppercased())
-                                        .padding(6)
-                                        .font(Font.themeRegular(with: 14))
-                                        .background(isCurrentItemSelected ? Color("FeedItemBackSelected") : Color("FeedItemBack"))
-                                        .foregroundColor(isCurrentItemSelected ? Color("FeedItemForeSelected") : Color("FeedItemFore"))
                                 }
                             }
                         }
@@ -91,7 +105,7 @@ struct MainView: View {
                             PostCellView(post: post)
                                 .listRowSeparator(.hidden)
                                 .background(NavigationLink {
-                                    SinglePostView(post: post.post)
+                                    SinglePostView(razrabsApi: razrabsApi, viewModel: .init(postData: .simplePost(simplePost: post.post)))
                                 } label: {
                                     EmptyView()
                                 })
