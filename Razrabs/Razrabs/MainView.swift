@@ -56,27 +56,6 @@ struct MainView: View {
         })
     }
     
-    struct TagView: View {
-        let feedItem: FeedItem
-        let action: () -> Void
-        
-//        @State var isSelected = false
-        
-        var body: some View {
-            Button {
-                action()
-            } label: {
-//                let isCurrentItemSelected = feedItem.uid == viewModel.selectedFeedItemUid
-                let isCurrentItemSelected = false   //  TODO
-                Text(feedItem.name.uppercased())
-                    .padding(6)
-                    .font(Font.themeRegular(with: 14))
-                    .background(isCurrentItemSelected ? Color("FeedItemBackSelected") : Color("FeedItemBack"))
-                    .foregroundColor(isCurrentItemSelected ? Color("FeedItemForeSelected") : Color("FeedItemFore"))
-            }
-        }
-    }
-    
     var body: some View {
         NavigationView {
             VStack {
@@ -87,7 +66,7 @@ struct MainView: View {
                     ScrollView(.horizontal) {
                         HStack {
                             ForEach(viewModel.feedItems, id: \FeedItem.uid) { feedItem in
-                                TagView(feedItem: feedItem) {
+                                TagCellView(feedItem: feedItem) {
                                     print("feed item \(feedItem.name) selected")
                                     if feedItem.uid != viewModel.selectedFeedItemUid {
                                         viewModel.selectedFeedItemUid = feedItem.uid

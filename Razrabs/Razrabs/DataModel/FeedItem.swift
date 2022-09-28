@@ -8,3 +8,5 @@ struct FeedItem: Codable {
     var tags = [TagItem]()
     var status: String?
 }
+
+extension FeedItem: TagProtocol {}

@@ -7,3 +7,5 @@ struct TagItem: Codable {
     var name = ""
     var description = ""
 }
+
+extension TagItem: TagProtocol {}

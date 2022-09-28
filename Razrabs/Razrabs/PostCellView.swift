@@ -65,9 +65,12 @@ struct PostCellView: View {
                 }
                 .frame(width: 80)
                 VStack {
-                    Text(post.post.title.uppercased())
-                        .font(Font.themeRegular(with: 14))
-                        .frame(alignment: .top)
+                    HStack {
+                        Text(post.post.title.uppercased())
+                            .font(Font.themeRegular(with: 14))
+                            .frame(alignment: .top)
+                        Spacer()
+                    }
                     HStack {
                         Text(post.createdAtString)
                             .font(Font.themeRegular(with: 14))

@@ -1,8 +1,10 @@
 import SwiftUI
 
 extension Font {
+    static let themeRegularName = "StyreneBLCWeb-Regular"
+    
     static func themeRegular(with size: CGFloat) -> Font {
-        return Font.custom("StyreneBLCWeb-Regular", size: size)
+        return Font.custom(themeRegularName, size: size)
     }
     
     static func themeMedium(with size: CGFloat) -> Font {

@@ -5,6 +5,33 @@ import Foundation
         case simplePost(simplePost: SimplePost)
         case post(post: Post)
         
+        var content: String {
+            switch self {
+            case .post(let post):
+                return post.content
+            case .simplePost(let simplePost):
+                return simplePost.content
+            }
+        }
+        
+        var commentsCount: Int {
+            switch self {
+            case .post(let post):
+                return post.comments.count
+            case .simplePost(_):
+                return 0
+            }
+        }
+        
+        var tags: [TagItem] {
+            switch self {
+            case .simplePost(_):
+                return []
+            case .post(let post):
+                return post.tags
+            }
+        }
+        
         var uid: String {
             switch self {
             case .post(let post):

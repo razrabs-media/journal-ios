@@ -1,4 +1,5 @@
 import SwiftUI
+import MarkdownUI
 
 struct SinglePostView: View {
     @Environment(\.presentationMode) var presentationMode: Binding<PresentationMode>
@@ -30,6 +31,10 @@ struct SinglePostView: View {
                         Link(name.uppercased(), destination: url)
                             .font(Font.themeRegular(with: 14))
                             .foregroundColor(Color("AuthorFore"))
+                    } else {
+                        Rectangle()
+                            .foregroundColor(Color.gray)
+                            .frame(width: 80, height: 10, alignment: .leading)
                     }
                     Spacer()
                 }
@@ -54,12 +59,34 @@ struct SinglePostView: View {
                 Rectangle()
                     .strokeBorder(Color.label)
                     .frame(height: 1)
-                /*ScrollView(.horizontal) {
+                ScrollView(.horizontal) {
                     HStack {
-//                        ForEach(<#T##data: _##_#>, id: <#T##KeyPath<_.Element, _>#>, content: <#T##(_.Element) -> _#>)
+                        ForEach(viewModel.postData.tags, id: \TagItem.uid) { tagItem in
+                            TagCellView(feedItem: tagItem) {
+                                //..
+                            }
+                                .allowsHitTesting(false)
+                        }
                     }
-                }*/
-                Spacer()
+                }
+                HStack(spacing: 0) {
+                    CommentsButton(title: "Комменты: \(viewModel.postData.commentsCount)".uppercased()) {
+                        print("comments touched")
+                    }
+                    CommentsButton(title: "Поделиться".uppercased()) {
+                        print("share touched")
+                    }
+                }
+                    .frame(height: 50)
+                    .padding([.top], 4)
+                Markdown(viewModel.postData.content)
+                    .markdownStyle(.init(font: .custom(Font.themeRegularName, size: 20),
+                                         foregroundColor: .black,
+                                         measurements: .init(
+                                            codeFontScale: 0.8,
+                                            headingSpacing: 0.3
+                                          )))
+//                Text(LocalizedStringKey(viewModel.postData.content))
             }
         }
         .padding()
