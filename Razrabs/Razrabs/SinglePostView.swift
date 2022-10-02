@@ -81,17 +81,16 @@ struct SinglePostView: View {
                     .padding([.top], 4)
                 Markdown(viewModel.postData.content)
                     .markdownStyle(.init(font: .custom(Font.themeRegularName, size: 20),
-                                         foregroundColor: .black,
+                                         foregroundColor: .init("PostTextFore"),
                                          measurements: .init(
                                             codeFontScale: 0.8,
                                             headingSpacing: 0.3
                                           )))
-//                Text(LocalizedStringKey(viewModel.postData.content))
+                    .accentColor(Color("AuthorFore"))
             }
         }
         .padding()
         .navigationTitle("Разрабы")
-        .background(Color(.white))
         .navigationBarBackButtonHidden(true)
         .navigationBarItems(leading: backButton)
         .onAppear {

@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		E9035D0328E4E90700FA6023 /* UINavigationController+interactivePop.swift in Sources */ = {isa = PBXBuildFile; fileRef = E9035D0228E4E90700FA6023 /* UINavigationController+interactivePop.swift */; };
 		E907806528B09D6A0045F339 /* RazrabsApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = E907806428B09D6A0045F339 /* RazrabsApp.swift */; };
 		E907806728B09D6A0045F339 /* MainView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E907806628B09D6A0045F339 /* MainView.swift */; };
 		E907806928B09D6D0045F339 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = E907806828B09D6D0045F339 /* Assets.xcassets */; };
@@ -95,6 +96,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		E9035D0228E4E90700FA6023 /* UINavigationController+interactivePop.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UINavigationController+interactivePop.swift"; sourceTree = "<group>"; };
 		E907806128B09D6A0045F339 /* Razrabs.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Razrabs.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		E907806428B09D6A0045F339 /* RazrabsApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RazrabsApp.swift; sourceTree = "<group>"; };
 		E907806628B09D6A0045F339 /* MainView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainView.swift; sourceTree = "<group>"; };
@@ -311,6 +313,7 @@
 				E919B18C28BE63FD00AB2E1C /* Font+theme.swift */,
 				E9BB5EEA28CD0022005AF67C /* Color+predefinedColors.swift */,
 				E9C6430328D76D0000ACEB2B /* DateFormatter+theme.swift */,
+				E9035D0228E4E90700FA6023 /* UINavigationController+interactivePop.swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -524,6 +527,7 @@
 				E99B0C5D28CE749000ABA943 /* ProfileItem.swift in Sources */,
 				E907806528B09D6A0045F339 /* RazrabsApp.swift in Sources */,
 				E9BD099328B5F1500063CA24 /* ComponentItem.swift in Sources */,
+				E9035D0328E4E90700FA6023 /* UINavigationController+interactivePop.swift in Sources */,
 				E9BB5EEB28CD0022005AF67C /* Color+predefinedColors.swift in Sources */,
 				E907809A28B0F0470045F339 /* FeedItem.swift in Sources */,
 				E9BD098D28B5EFD30063CA24 /* Configuration.swift in Sources */,

@@ -8,7 +8,7 @@ struct PostCellView: View {
         case .large:
             ZStack {
                 Rectangle()
-                    .strokeBorder(Color(.black))
+                    .strokeBorder(Color("LargePostBorder"))
                     .frame(height: 300)
                 VStack {
                     Spacer()
