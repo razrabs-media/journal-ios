@@ -102,6 +102,7 @@ struct MainView: View {
                 }
             }
             .onAppear {
+                viewModel.feedItems = storage.extractFeedItems().map{ .init(feedItem: $0, isSelected: false) }
                 requestFeed()
             }.alert(viewModel.errorText, isPresented: $viewModel.isErrorPresented) {
                 Button("Retry", role: .cancel) {

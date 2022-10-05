@@ -45,48 +45,10 @@ class Storage {
             for tagItemIndex in feedItems[feedItemIndex].tags.indices {
                 feedItems[feedItemIndex].tags[tagItemIndex].order = tagItemIndex
                 _ = storage.replace(feedItems[feedItemIndex].tags[tagItemIndex])
-                switch storage.count(all: TagItemToFeedItem.self) {
-                case .success(let value):
-                    print("TagItemToFeedItem count = \(value)")
-                case .failure(let error):
-                    print("error = \(error)")
-                }
-                let tagItemToFeedItem = TagItemToFeedItem(feedItemUid: feedItems[feedItemIndex].uid, tagItemUid: feedItems[feedItemIndex].tags[tagItemIndex].uid)
-                print("tagItemToFeedItem = \(tagItemToFeedItem)")
-                _ = storage.insert(tagItemToFeedItem)
-                switch storage.count(all: TagItemToFeedItem.self) {
-                case .success(let value):
-                    print("TagItemToFeedItem count = \(value)")
-                case .failure(let error):
-                    print("error = \(error)")
-                }
+                _ = storage.insert(TagItemToFeedItem(feedItemUid: feedItems[feedItemIndex].uid, tagItemUid: feedItems[feedItemIndex].tags[tagItemIndex].uid))
             }
         }
         _ = storage.commit()
-        
-        let allTagsResult = storage.getAll(all: TagItem.self)
-        switch allTagsResult {
-        case .success(let tagItems):
-            print("tagItems = \(tagItems)")
-        case .failure(let error):
-            print("error = \(error)")
-        }
-        
-        let allFeedResult = storage.getAll(all: FeedItem.self)
-        switch allFeedResult {
-        case .success(let feedItems):
-            print("feedItems = \(feedItems)")
-        case .failure(let error):
-            print("error = \(error)")
-        }
-        
-        let allTagToFeedResult = storage.getAll(all: TagItemToFeedItem.self)
-        switch allTagToFeedResult {
-        case .success(let tagItemToFeedItems):
-            print("tagItemToFeedItems = \(tagItemToFeedItems)")
-        case .failure(let error):
-            print("error = \(error)")
-        }
     }
     
     func extractFeedItems() -> [FeedItem] {

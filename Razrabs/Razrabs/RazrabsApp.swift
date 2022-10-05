@@ -18,6 +18,8 @@ struct RazrabsApp: App {
 //                UINavigationBar.appearance().tintColor = .clear
 //                UINavigationBar.appearance().backIndicatorImage = UIImage(named: "back")?.withRenderingMode(.alwaysOriginal)
 //                UINavigationBar.appearance().backIndicatorTransitionMaskImage = UIImage(named: "back")?.withRenderingMode(.alwaysOriginal)
+            }.onAppear {
+                storage.sync()
             }
         }
     }
