@@ -2,6 +2,7 @@ import SwiftUI
 
 protocol TagProtocol {
     var name: String { get }
+    var isSelected: Bool { get }
 }
 
 struct TagCellView: View {
@@ -12,8 +13,7 @@ struct TagCellView: View {
         Button {
             action()
         } label: {
-//                let isCurrentItemSelected = feedItem.uid == viewModel.selectedFeedItemUid
-            let isCurrentItemSelected = false   //  TODO
+            let isCurrentItemSelected = feedItem.isSelected
             Text(feedItem.name.uppercased())
                 .padding(6)
                 .font(Font.themeRegular(with: 14))

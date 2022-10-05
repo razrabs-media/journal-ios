@@ -2,21 +2,23 @@ import SwiftUI
 
 struct MainView: View {
     let razrabsApi: RazrabsApi
+    let storage: Storage
     
     @StateObject var viewModel = MainViewModel()
     
     func requestFeed() {
         viewModel.isLoading = true
         razrabsApi.requestFeed(callback: { result in
-//            print("feed result received")
             switch result {
-            case .success(let feedResponse):
+            case .success(var feedResponse):
+                storage.cache(feedItems: &feedResponse.data.feeds)
+                
                 razrabsApi.requestCurrentFrontPage { result in
                     viewModel.isLoading = false
                     switch result {
                     case .success(var currentFrontPageResponse):
-                        print("current front page received")
-                        viewModel.feedItems = feedResponse.data.feeds
+                        let selectedFeedItemUid = viewModel.feedItems.first{ $0.isSelected }?.uid
+                        viewModel.feedItems = feedResponse.data.feeds.map{ .init(feedItem: $0, isSelected: $0.uid == selectedFeedItemUid) }
                         var posts = [PostViewModel]()
                         posts.reserveCapacity(currentFrontPageResponse.data.currentFrontPage.content.count)
                         currentFrontPageResponse.data.currentFrontPage.content.sort { lhs, rhs in
@@ -65,13 +67,19 @@ struct MainView: View {
                 } else {
                     ScrollView(.horizontal) {
                         HStack {
-                            ForEach(viewModel.feedItems, id: \FeedItem.uid) { feedItem in
-                                TagCellView(feedItem: feedItem) {
-                                    print("feed item \(feedItem.name) selected")
-                                    if feedItem.uid != viewModel.selectedFeedItemUid {
-                                        viewModel.selectedFeedItemUid = feedItem.uid
+                            ForEach(viewModel.feedItems, id: \FeedItemViewModel.uid) { feedItemViewModel in
+                                TagCellView(feedItem: feedItemViewModel) {
+                                    print("feed item \(feedItemViewModel.name) selected")
+                                    if feedItemViewModel.uid != viewModel.selectedFeedItemUid {
+                                        viewModel.selectedFeedItemUid = feedItemViewModel.uid
+                                        for item in viewModel.feedItems {
+                                            item.isSelected = item === feedItemViewModel
+                                        }
                                     } else {
                                         viewModel.selectedFeedItemUid = ""
+                                        for item in viewModel.feedItems {
+                                            item.isSelected = false
+                                        }
                                     }
                                 }
                             }
@@ -106,8 +114,8 @@ struct MainView: View {
     }
 }
 
-struct ContentView_Previews: PreviewProvider {
+/*struct ContentView_Previews: PreviewProvider {
     static var previews: some View {
         MainView(razrabsApi: .init(scheme: "https", host: "api.razrabs.ru"))
     }
-}
+}*/

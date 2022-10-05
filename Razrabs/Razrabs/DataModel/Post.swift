@@ -10,7 +10,7 @@ struct Post: Codable {
     var content = ""
     var description = ""
     var status = ""
-    var tags = [TagItem]()
+    var tags: [TagItem]?
     var githubAuthor: GithubAuthor?
     var interactions = PostInteractions()
     var comments = [CommentItem]()

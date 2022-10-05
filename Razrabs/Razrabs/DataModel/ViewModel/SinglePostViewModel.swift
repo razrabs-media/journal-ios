@@ -28,7 +28,7 @@ import Foundation
             case .simplePost(_):
                 return []
             case .post(let post):
-                return post.tags
+                return post.tags ?? []
             }
         }
         
