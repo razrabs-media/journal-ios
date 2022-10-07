@@ -131,7 +131,7 @@
 		E91FABC828D134D60024239C /* Post+Equatable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Post+Equatable.swift"; sourceTree = "<group>"; };
 		E91FABCA28D1354D0024239C /* PostTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PostTests.swift; sourceTree = "<group>"; };
 		E9392D5228E9FD1000D5943A /* FeedItemViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FeedItemViewModel.swift; sourceTree = "<group>"; };
-		E9392D5528EA252500D5943A /* SQLiteORMSwift.Swift */ = {isa = PBXFileReference; lastKnownFileType = wrapper; name = SQLiteORMSwift.Swift; path = ../../../../../Shared/Code/SQLiteORMSwift.Swift; sourceTree = "<group>"; };
+		E9392D5528EA252500D5943A /* SQLiteORMSwift.Swift */ = {isa = PBXFileReference; lastKnownFileType = wrapper; name = SQLiteORMSwift.Swift; path = ../../SQLiteORMSwift.Swift; sourceTree = "<group>"; };
 		E9392D5A28EA489200D5943A /* TagItemToFeedItem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TagItemToFeedItem.swift; sourceTree = "<group>"; };
 		E9392D5C28EB055D00D5943A /* Storage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Storage.swift; sourceTree = "<group>"; };
 		E93EB7F028B60CE700338215 /* FrontPage+Equatable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "FrontPage+Equatable.swift"; sourceTree = "<group>"; };
