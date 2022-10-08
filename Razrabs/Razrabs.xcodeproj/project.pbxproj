@@ -81,6 +81,7 @@
 		E9ECFFA328B71FBE003682D1 /* Color+hex.swift in Sources */ = {isa = PBXBuildFile; fileRef = E9ECFFA228B71FBE003682D1 /* Color+hex.swift */; };
 		E9ECFFA628B72A0B003682D1 /* MainViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = E9ECFFA528B72A0B003682D1 /* MainViewModel.swift */; };
 		E9ECFFA828B72A2E003682D1 /* PostViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = E9ECFFA728B72A2E003682D1 /* PostViewModel.swift */; };
+		EC9BE6C928F08F35009C86B5 /* CachedAsyncImage in Frameworks */ = {isa = PBXBuildFile; productRef = EC9BE6C828F08F35009C86B5 /* CachedAsyncImage */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -185,6 +186,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				E9392D5828EA3CB500D5943A /* SQLiteORM in Frameworks */,
+				EC9BE6C928F08F35009C86B5 /* CachedAsyncImage in Frameworks */,
 				E907809828B0AE150045F339 /* Then in Frameworks */,
 				E9A9C07E28E3394000DC78C8 /* MarkdownUI in Frameworks */,
 			);
@@ -437,6 +439,7 @@
 				E907809728B0AE150045F339 /* Then */,
 				E9A9C07D28E3394000DC78C8 /* MarkdownUI */,
 				E9392D5728EA3CB500D5943A /* SQLiteORM */,
+				EC9BE6C828F08F35009C86B5 /* CachedAsyncImage */,
 			);
 			productName = Razrabs.ru;
 			productReference = E907806128B09D6A0045F339 /* Razrabs.app */;
@@ -513,6 +516,7 @@
 			packageReferences = (
 				E907809628B0AE150045F339 /* XCRemoteSwiftPackageReference "Then" */,
 				E9A9C07C28E3394000DC78C8 /* XCRemoteSwiftPackageReference "MarkdownUI" */,
+				EC9BE6C728F08F35009C86B5 /* XCRemoteSwiftPackageReference "swiftui-cached-async-image" */,
 			);
 			productRefGroup = E907806228B09D6A0045F339 /* Products */;
 			projectDirPath = "";
@@ -968,6 +972,14 @@
 				minimumVersion = 1.0.0;
 			};
 		};
+		EC9BE6C728F08F35009C86B5 /* XCRemoteSwiftPackageReference "swiftui-cached-async-image" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/lorenzofiamingo/swiftui-cached-async-image.git";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 2.0.0;
+			};
+		};
 /* End XCRemoteSwiftPackageReference section */
 
 /* Begin XCSwiftPackageProductDependency section */
@@ -984,6 +996,11 @@
 			isa = XCSwiftPackageProductDependency;
 			package = E9A9C07C28E3394000DC78C8 /* XCRemoteSwiftPackageReference "MarkdownUI" */;
 			productName = MarkdownUI;
+		};
+		EC9BE6C828F08F35009C86B5 /* CachedAsyncImage */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = EC9BE6C728F08F35009C86B5 /* XCRemoteSwiftPackageReference "swiftui-cached-async-image" */;
+			productName = CachedAsyncImage;
 		};
 /* End XCSwiftPackageProductDependency section */
 	};

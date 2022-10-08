@@ -1,4 +1,10 @@
 import SwiftUI
+import CachedAsyncImage
+
+extension URLCache {
+    
+    static let imageCache = URLCache(memoryCapacity: 512*1000*1000, diskCapacity: 10*1000*1000*1000)
+}
 
 struct PostCellView: View {
     let post: PostViewModel
@@ -25,7 +31,8 @@ struct PostCellView: View {
             }
         case .medium:
             VStack {
-                AsyncImage(url: .init(string: post.post.previewUrl),
+                CachedAsyncImage(url: .init(string: post.post.previewUrl),
+                                 urlCache: .imageCache,
                            content: { image in
                     image.resizable()
                         .scaledToFill()
@@ -51,7 +58,7 @@ struct PostCellView: View {
         case .small:
             HStack {
                 VStack {
-                    AsyncImage(url: .init(string: post.post.previewUrl)) { image in
+                    CachedAsyncImage(url: .init(string: post.post.previewUrl), urlCache: .imageCache) { image in
                         image.resizable()
                             .scaledToFill()
                             .frame(width: 80, height: 50)

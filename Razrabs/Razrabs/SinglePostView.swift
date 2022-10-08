@@ -1,5 +1,6 @@
 import SwiftUI
 import MarkdownUI
+import CachedAsyncImage
 
 struct SinglePostView: View {
     @Environment(\.presentationMode) var presentationMode: Binding<PresentationMode>
@@ -10,7 +11,8 @@ struct SinglePostView: View {
     var body: some View {
         ScrollView {
             VStack {
-                AsyncImage(url: .init(string: viewModel.postData.previewUrl),
+                CachedAsyncImage(url: .init(string: viewModel.postData.previewUrl),
+                                 urlCache: .imageCache,
                            content: { image in
                     image.resizable()
                         .scaledToFill()

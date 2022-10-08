@@ -94,12 +94,6 @@ class Storage {
             frontPage.content[postOnFrontPageIndex].order = postOnFrontPageIndex
             _ = storage.replace(frontPage.content[postOnFrontPageIndex])
             _ = storage.replace(frontPage.content[postOnFrontPageIndex].post)
-            switch storage.get(of: SimplePost.self, id: frontPage.content[postOnFrontPageIndex].post.uid) {
-            case .success(let post):
-                print("post = \(post)")
-            case .failure(let error):
-                print("error = \(error)")
-            }
             _ = storage.replace(frontPage.content[postOnFrontPageIndex].component)
         }
         _ = storage.commit()

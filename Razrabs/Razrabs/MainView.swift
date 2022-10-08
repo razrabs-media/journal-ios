@@ -6,6 +6,30 @@ struct MainView: View {
     
     @StateObject var viewModel = MainViewModel()
     
+    func update(with frontPage: FrontPage) {
+        var posts = [PostViewModel]()
+        posts = frontPage.content.sorted { lhs, rhs in
+            if lhs.position.y == rhs.position.y {
+                return lhs.position.x < rhs.position.x
+            } else {
+                return lhs.position.y < rhs.position.y
+            }
+        }.map{
+            let appearanceType: PostViewModel.AppearanceType
+            switch $0.component.configuration.w {
+            case 4:
+                appearanceType = .large
+            case 2:
+                appearanceType = .medium
+            default:
+                appearanceType = .small
+            }
+            return PostViewModel(post: $0.post, appearanceType: appearanceType)
+        }
+        viewModel.frontPage = frontPage
+        viewModel.posts = posts
+    }
+    
     func requestFeed() {
         viewModel.isLoading = true
         razrabsApi.requestFeed(callback: { result in
@@ -19,29 +43,9 @@ struct MainView: View {
                     case .success(var currentFrontPageResponse):
                         let selectedFeedItemUid = viewModel.feedItems.first{ $0.isSelected }?.uid
                         viewModel.feedItems = feedResponse.data.feeds.map{ .init(feedItem: $0, isSelected: $0.uid == selectedFeedItemUid) }
-                        var posts = [PostViewModel]()
-                        posts.reserveCapacity(currentFrontPageResponse.data.currentFrontPage.content.count)
-                        currentFrontPageResponse.data.currentFrontPage.content.sort { lhs, rhs in
-                            if lhs.position.y == rhs.position.y {
-                                return lhs.position.x < rhs.position.x
-                            } else {
-                                return lhs.position.y < rhs.position.y
-                            }
-                        }
-                        for postOnFrontPage in currentFrontPageResponse.data.currentFrontPage.content {
-                            let appearanceType: PostViewModel.AppearanceType
-                            switch postOnFrontPage.component.configuration.w {
-                            case 4:
-                                appearanceType = .large
-                            case 2:
-                                appearanceType = .medium
-                            default:
-                                appearanceType = .small
-                            }
-                            posts.append(PostViewModel(post: postOnFrontPage.post, appearanceType: appearanceType))
-                        }
-                        viewModel.frontPage = currentFrontPageResponse.data.currentFrontPage
-                        viewModel.posts = posts
+                        
+                        storage.cache(frontPage: &currentFrontPageResponse.data.currentFrontPage)
+                        update(with: currentFrontPageResponse.data.currentFrontPage)
                     case .failure(let error):
                         print("error = \(error)")
                         viewModel.isLoading = false
@@ -69,7 +73,6 @@ struct MainView: View {
                         HStack {
                             ForEach(viewModel.feedItems, id: \FeedItemViewModel.uid) { feedItemViewModel in
                                 TagCellView(feedItem: feedItemViewModel) {
-                                    print("feed item \(feedItemViewModel.name) selected")
                                     if feedItemViewModel.uid != viewModel.selectedFeedItemUid {
                                         viewModel.selectedFeedItemUid = feedItemViewModel.uid
                                         for item in viewModel.feedItems {
@@ -103,6 +106,9 @@ struct MainView: View {
             }
             .onAppear {
                 viewModel.feedItems = storage.extractFeedItems().map{ .init(feedItem: $0, isSelected: false) }
+                if let frontPage = storage.extractFrontPage() {
+                    update(with: frontPage)
+                }
                 requestFeed()
             }.alert(viewModel.errorText, isPresented: $viewModel.isErrorPresented) {
                 Button("Retry", role: .cancel) {
